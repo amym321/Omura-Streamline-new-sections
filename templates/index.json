@@ -46,6 +46,7 @@
     "text-and-image-2": {
       "type": "text-and-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Group_12.png",
         "image_mask": "none",
         "image2_mask": "none",
         "subtitle": "",
