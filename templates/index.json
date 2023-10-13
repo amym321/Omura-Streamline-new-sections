@@ -157,7 +157,7 @@
       "settings": {
         "title": "Featured collection",
         "description": "With infinite scrolling",
-        "home_featured_products": "",
+        "home_featured_products": "rings",
         "per_row": "small",
         "alt": false
       }
