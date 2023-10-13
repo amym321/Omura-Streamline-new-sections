@@ -83,7 +83,7 @@
     "8c3621e2-b409-489c-9e45-bbfd0eaaeb83": {
       "type": "featured-video",
       "custom_css": [
-        ".index-section div:nth-of-type(2) {padding: 0; margin: 0;}"
+
       ],
       "settings": {
         "title": "",
