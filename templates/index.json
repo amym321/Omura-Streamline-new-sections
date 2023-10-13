@@ -66,6 +66,7 @@
     },
     "74f0a4fb-5bf2-45e3-9252-e32665d69d77": {
       "type": "hero-video",
+      "disabled": true,
       "settings": {
         "title": "Bring your\nbrand to life.",
         "title_size": 80,
