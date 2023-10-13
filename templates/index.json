@@ -79,6 +79,14 @@
         "mobile_height": "auto"
       }
     },
+    "8c3621e2-b409-489c-9e45-bbfd0eaaeb83": {
+      "type": "featured-video",
+      "settings": {
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "alt": false
+      }
+    },
     "9b320625-b9d7-4f72-a405-131397642f91": {
       "type": "testimonials",
       "blocks": {
@@ -434,6 +442,7 @@
     "text-and-image",
     "text-and-image-2",
     "74f0a4fb-5bf2-45e3-9252-e32665d69d77",
+    "8c3621e2-b409-489c-9e45-bbfd0eaaeb83",
     "9b320625-b9d7-4f72-a405-131397642f91",
     "featured-collection-slider2",
     "slideshow",
