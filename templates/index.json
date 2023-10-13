@@ -95,11 +95,43 @@
             "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
             "author": "Author's name"
           }
+        },
+        "f5211c55-f89a-47df-b5e7-c3e3cd8971cf": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "e4e0e496-cb7e-44b8-b83f-2f633f22479e": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "bc57f6df-b653-4043-90f7-372117c55c68": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "79983f3a-161d-44fc-af66-95cc502783f7": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
         }
       },
       "block_order": [
         "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-1",
-        "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-2"
+        "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-2",
+        "f5211c55-f89a-47df-b5e7-c3e3cd8971cf",
+        "e4e0e496-cb7e-44b8-b83f-2f633f22479e",
+        "bc57f6df-b653-4043-90f7-372117c55c68",
+        "79983f3a-161d-44fc-af66-95cc502783f7"
       ],
       "settings": {
         "title": "Testimonials",
