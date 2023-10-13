@@ -1,7 +1,7 @@
 {
   "sections": {
-    "1199cf54-a993-4c2c-bf68-655c07fa52b7": {
-      "type": "text-and-image",
+    "151eeb58-e4d6-4f62-84cb-faa8964e04ca": {
+      "type": "text-and-images-three",
       "settings": {
         "image_mask": "none",
         "image2_mask": "none",
@@ -170,7 +170,7 @@
         "title": "",
         "align_text": "center",
         "desktop_columns_per_row": 3,
-        "icon_color": "#000",
+        "icon_color": "#000000",
         "button_label": "",
         "button_link": "",
         "alt": false
@@ -395,7 +395,7 @@
     }
   },
   "order": [
-    "1199cf54-a993-4c2c-bf68-655c07fa52b7",
+    "151eeb58-e4d6-4f62-84cb-faa8964e04ca",
     "text-and-image",
     "text-and-image-2",
     "74f0a4fb-5bf2-45e3-9252-e32665d69d77",
