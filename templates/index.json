@@ -140,6 +140,16 @@
         "alt": false
       }
     },
+    "featured-collection-slider2": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "title": "Featured collection",
+        "description": "With infinite scrolling",
+        "home_featured_products": "",
+        "per_row": "small",
+        "alt": false
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -311,17 +321,6 @@
         "mobile_size": 0
       }
     },
-    "featured-collection-slider2": {
-      "type": "featured-collection-slider",
-      "disabled": true,
-      "settings": {
-        "title": "Featured collection",
-        "description": "With infinite scrolling",
-        "home_featured_products": "",
-        "per_row": "small",
-        "alt": false
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -436,12 +435,12 @@
     "text-and-image-2",
     "74f0a4fb-5bf2-45e3-9252-e32665d69d77",
     "9b320625-b9d7-4f72-a405-131397642f91",
+    "featured-collection-slider2",
     "slideshow",
     "33688e9e-31ee-4e0b-a367-7fda44ffd738",
     "8c1a5397-1bf9-40bb-8774-db9cf45105aa",
     "rich-text",
     "hero-animated",
-    "featured-collection-slider2",
     "featured-collection",
     "featured-collections",
     "map",
