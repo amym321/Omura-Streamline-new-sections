@@ -25,6 +25,7 @@
     "text-and-image": {
       "type": "text-and-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/omura_1.png",
         "image_mask": "none",
         "image2_mask": "none",
         "subtitle": "",
@@ -37,8 +38,8 @@
         "image_width": "50",
         "layout": "right",
         "alt": false,
-        "top_padding": true,
-        "bottom_padding": true,
+        "top_padding": false,
+        "bottom_padding": false,
         "lazyload_images": true
       }
     },
