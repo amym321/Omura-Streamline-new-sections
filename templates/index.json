@@ -93,6 +93,7 @@
     },
     "91688e92-643b-46e5-ba26-a12a523f027c": {
       "type": "image-testimonial",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "description": "",
