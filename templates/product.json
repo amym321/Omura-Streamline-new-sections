@@ -65,6 +65,22 @@
           "disabled": true,
           "settings": {
           }
+        },
+        "e9918fd8-7a79-403c-b472-5d8f7404b9d2": {
+          "type": "custom",
+          "settings": {
+            "code": "<h4>Custom code block<\/h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.<\/p>"
+          }
+        },
+        "dac6ebe2-5572-4d3c-a284-a1a9abf98585": {
+          "type": "complementary_products",
+          "settings": {
+            "product_complementary_heading": "Pairs well with",
+            "complementary_count": 4,
+            "per_slide": 2,
+            "control_type": "dots",
+            "image_style": "default"
+          }
         }
       },
       "block_order": [
@@ -76,7 +92,9 @@
         "description",
         "tab",
         "contact",
-        "share"
+        "share",
+        "e9918fd8-7a79-403c-b472-5d8f7404b9d2",
+        "dac6ebe2-5572-4d3c-a284-a1a9abf98585"
       ],
       "settings": {
         "product_image_size": "large",
