@@ -83,7 +83,7 @@
     "8c3621e2-b409-489c-9e45-bbfd0eaaeb83": {
       "type": "featured-video",
       "custom_css": [
-        ".index-section div:nth-of-type(1) {padding-left: 0; padding-right: 0; margin: 0; max-width: none; }"
+        ".index-section div:nth-of-type(1) {padding-left: 0; padding-right: 0; margin: 0; max-width: none;}"
       ],
       "settings": {
         "title": "",
@@ -156,8 +156,8 @@
         "79983f3a-161d-44fc-af66-95cc502783f7"
       ],
       "settings": {
-        "title": "Testimonials",
-        "align_text": "center",
+        "title": "",
+        "align_text": "left",
         "round_images": true,
         "alt": false
       }
