@@ -20,8 +20,8 @@
         "sales_point": {
           "type": "sales_point",
           "settings": {
-            "icon": "globe",
-            "text": "Free worldwide shipping"
+            "icon": "checkmark",
+            "text": "One Year Warranty"
           }
         },
         "inventory_status": {
