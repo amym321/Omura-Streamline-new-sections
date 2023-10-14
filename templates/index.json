@@ -109,6 +109,7 @@
           "type": "testimonial",
           "settings": {
             "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "image": "shopify:\/\/shop_images\/Manulife_logo_2018.png",
             "author": "Author's name"
           }
         },
