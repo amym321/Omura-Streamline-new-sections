@@ -164,7 +164,7 @@
       "settings": {
         "title": "",
         "align_text": "left",
-        "round_images": true,
+        "round_images": false,
         "alt": false
       }
     },
