@@ -96,7 +96,7 @@
       "settings": {
         "title": "Featured collection",
         "description": "",
-        "home_featured_products": "",
+        "home_featured_products": "earrings",
         "per_row": "small",
         "alt": false
       }
