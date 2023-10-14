@@ -180,7 +180,8 @@
             "link": "",
             "link_text": "Optional button",
             "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-bottom horizontal-left"
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Banner_02.png"
           }
         }
       },
