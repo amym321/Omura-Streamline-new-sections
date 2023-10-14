@@ -108,7 +108,7 @@
         "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-1": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
             "author": "Author's name"
           }
         },
