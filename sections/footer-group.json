@@ -1,1 +1,37 @@
-{"type":"footer","name":"t:sections.footer-group.name","sections":{"footer":{"type":"footer","settings":{"show_newsletter":true,"newsletter_title":"Join the club","newsletter_richtext":"","show_social_icons":true,"menu":"footer","show_payment_icons":false,"show_copyright":false}},"social":{"type":"social","settings":{}}},"order":["social","footer"]}
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "social": {
+      "type": "social",
+      "settings": {
+        "enable_home": true,
+        "enable_product": true,
+        "enable_collection": false,
+        "title": "On social",
+        "description": "<p>Send us yours <a href=\"https:\/\/www.instagram.com\/omura\/?hl=enouraccount\/\" title=\"https:\/\/www.instagram.com\/omura\/?hl=enouraccount\/\">@youraccount<\/a><\/p>"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "show_newsletter": true,
+        "newsletter_title": "Join the club",
+        "newsletter_richtext": "",
+        "show_locale_selector": true,
+        "show_currency_selector": true,
+        "show_currency_flags": true,
+        "enable_follow_on_shop_cta": true,
+        "show_social_icons": true,
+        "menu": "footer",
+        "show_payment_icons": false,
+        "show_copyright": false,
+        "copyright_text": ""
+      }
+    }
+  },
+  "order": [
+    "social",
+    "footer"
+  ]
+}
