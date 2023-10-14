@@ -17,6 +17,12 @@
             "color_swatches": false
           }
         },
+        "81f8ff1d-7c21-47ff-8630-c684c9dd3b18": {
+          "type": "trust_badge",
+          "settings": {
+            "trust_image": "shopify:\/\/shop_images\/omura_1.png"
+          }
+        },
         "sales_point": {
           "type": "sales_point",
           "settings": {
@@ -86,6 +92,7 @@
       "block_order": [
         "price",
         "variant_picker",
+        "81f8ff1d-7c21-47ff-8630-c684c9dd3b18",
         "sales_point",
         "inventory_status",
         "buy_buttons",
