@@ -174,12 +174,12 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
-            "title": "Two line\nslide title.",
-            "title_size": 70,
-            "subheading": "And an optional subheading",
+            "title": "Omura vaporizes up to 99% of all cannabinoid & terpenes",
+            "title_size": 60,
+            "subheading": "Yes, you read that right. We tested our award-winning devices at SC labs in California and came back with results that shocked even us.",
             "link": "",
-            "link_text": "Optional button",
-            "color_accent": "rgba(0,0,0,0)",
+            "link_text": "LEARN ABOUT OUR OVEN",
+            "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-center",
             "image": "shopify:\/\/shop_images\/Banner_02.png"
           }
