@@ -156,6 +156,9 @@
         "bc57f6df-b653-4043-90f7-372117c55c68",
         "79983f3a-161d-44fc-af66-95cc502783f7"
       ],
+      "custom_css": [
+        ".index-section {background-color: #fff8f6;}"
+      ],
       "settings": {
         "title": "",
         "align_text": "left",
