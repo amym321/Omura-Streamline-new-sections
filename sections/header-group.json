@@ -4,7 +4,6 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "disabled": true,
       "settings": {
         "show_announcement_home_only": false,
         "announcement_text": "Free shipping and returns",

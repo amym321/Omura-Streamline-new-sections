@@ -9,10 +9,10 @@
     "color_sale_tag_text": "#000000",
     "color_cart_dot": "#0f7662",
     "color_cart_dot_text": "#fff",
-    "color_alt_bg": "#223b3d",
+    "color_alt_bg": "#447064",
     "color_alt_text": "#ffffff",
-    "color_announcement": "#def4a9",
-    "color_announcement_text": "#111111",
+    "color_announcement": "#447064",
+    "color_announcement_text": "#ffffff",
     "color_newsletter": "#ffffff",
     "color_newsletter_text": "#111111",
     "color_drawer_background": "#def4a9",
@@ -155,7 +155,10 @@
     "color_input": "#ffffff",
     "checkout_banner_background_color": "#fff",
     "checkout_call_to_action_color": "#a26b25",
-    "checkout_use_header_image": false
+    "checkout_use_header_image": false,
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Core": {
