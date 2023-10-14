@@ -91,6 +91,16 @@
         "alt": false
       }
     },
+    "91688e92-643b-46e5-ba26-a12a523f027c": {
+      "type": "image-testimonial",
+      "settings": {
+        "title": "Featured collection",
+        "description": "",
+        "home_featured_products": "",
+        "per_row": "small",
+        "alt": false
+      }
+    },
     "9b320625-b9d7-4f72-a405-131397642f91": {
       "type": "testimonials",
       "blocks": {
@@ -154,6 +164,7 @@
     },
     "featured-collection-slider2": {
       "type": "featured-collection-slider",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "description": "With infinite scrolling",
@@ -447,6 +458,7 @@
     "text-and-image-2",
     "74f0a4fb-5bf2-45e3-9252-e32665d69d77",
     "8c3621e2-b409-489c-9e45-bbfd0eaaeb83",
+    "91688e92-643b-46e5-ba26-a12a523f027c",
     "9b320625-b9d7-4f72-a405-131397642f91",
     "featured-collection-slider2",
     "slideshow",
