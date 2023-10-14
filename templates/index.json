@@ -5,7 +5,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/omura-pen-1.jpg",
         "image_mask": "none",
-        "image2": "shopify:\/\/shop_images\/omura-pen-1.jpg",
+        "image2": "shopify:\/\/shop_images\/S1CopperBundle_background.png",
         "image2_mask": "none",
         "subtitle": "",
         "title": "Image with text",
