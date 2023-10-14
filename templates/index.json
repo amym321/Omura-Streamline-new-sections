@@ -159,23 +159,12 @@
         "79983f3a-161d-44fc-af66-95cc502783f7"
       ],
       "custom_css": [
-        ".index-section {background-color: #fff8f6;}"
+
       ],
       "settings": {
         "title": "",
         "align_text": "left",
         "round_images": false,
-        "alt": false
-      }
-    },
-    "featured-collection-slider2": {
-      "type": "featured-collection-slider",
-      "disabled": true,
-      "settings": {
-        "title": "Featured collection",
-        "description": "With infinite scrolling",
-        "home_featured_products": "rings",
-        "per_row": "small",
         "alt": false
       }
     },
@@ -318,38 +307,6 @@
         "alt": false
       }
     },
-    "hero-animated": {
-      "type": "hero-animated",
-      "blocks": {
-        "hero-animated-0": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "hero-animated-1": {
-          "type": "image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "hero-animated-0",
-        "hero-animated-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "style": "gif",
-        "title": "Make an impression",
-        "title_size": 80,
-        "subheading": "With fading or GIF-style animated images",
-        "link": "",
-        "link_text": "Optional button",
-        "color_accent": "rgba(0,0,0,0)",
-        "text_align": "vertical-center horizontal-center",
-        "desktop_size": 0,
-        "mobile_size": 0
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -404,17 +361,6 @@
         "alt": true
       }
     },
-    "map": {
-      "type": "map",
-      "disabled": true,
-      "settings": {
-        "map_title": "Our retail store",
-        "address": "<p>301 Front St W<br>Toronto, Canada<\/p><p>Mon - Fri, 8:30am - 10:30pm<br>Saturday, 8:30am - 10:30pm<br>Sunday, 8:30am - 10:30pm<\/p>",
-        "map_address": "301 Front St W, Toronto, ON M5V 2T6",
-        "api_key": "",
-        "lazyload_images": true
-      }
-    },
     "scrolling-text": {
       "type": "scrolling-text",
       "disabled": true,
@@ -427,35 +373,6 @@
         "direction": "left",
         "speed": 200
       }
-    },
-    "49ca22dc-b19e-40e3-b2a2-e19391359bee": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16187353891013__49ca22dc-b19e-40e3-b2a2-e19391359bee-image-1": {
-          "type": "image",
-          "settings": {
-            "title": "Two line\nslide title.",
-            "title_size": 80,
-            "subheading": "And an optional subheading",
-            "link": "",
-            "link_text": "Optional button",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center"
-          }
-        }
-      },
-      "block_order": [
-        "template--16187353891013__49ca22dc-b19e-40e3-b2a2-e19391359bee-image-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "style": "arrows",
-        "desktop_size": 0,
-        "mobile_size": 0,
-        "autoplay": false,
-        "autoplay_speed": 7,
-        "lazyload_images": true
-      }
     }
   },
   "order": [
@@ -466,16 +383,12 @@
     "8c3621e2-b409-489c-9e45-bbfd0eaaeb83",
     "91688e92-643b-46e5-ba26-a12a523f027c",
     "9b320625-b9d7-4f72-a405-131397642f91",
-    "featured-collection-slider2",
     "slideshow",
     "33688e9e-31ee-4e0b-a367-7fda44ffd738",
     "8c1a5397-1bf9-40bb-8774-db9cf45105aa",
     "rich-text",
-    "hero-animated",
     "featured-collection",
     "featured-collections",
-    "map",
-    "scrolling-text",
-    "49ca22dc-b19e-40e3-b2a2-e19391359bee"
+    "scrolling-text"
   ]
 }
