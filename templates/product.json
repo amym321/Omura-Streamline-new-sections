@@ -19,6 +19,7 @@
         },
         "81f8ff1d-7c21-47ff-8630-c684c9dd3b18": {
           "type": "trust_badge",
+          "disabled": true,
           "settings": {
             "trust_image": "shopify:\/\/shop_images\/omura_1.png"
           }
