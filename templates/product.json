@@ -24,6 +24,12 @@
             "trust_image": "shopify:\/\/shop_images\/omura_1.png"
           }
         },
+        "e9918fd8-7a79-403c-b472-5d8f7404b9d2": {
+          "type": "custom",
+          "settings": {
+            "code": "<div style=\"display:flex;\">\n<p style=\"display:inline; margin-right:15px;\" >Comes With: <\/p>\n<img width=\"120\" style=\"display:inline;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<img width=\"120\" style=\"display:inline; margin-left:10px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<\/div>"
+          }
+        },
         "sales_point": {
           "type": "sales_point",
           "settings": {
@@ -73,12 +79,6 @@
           "settings": {
           }
         },
-        "e9918fd8-7a79-403c-b472-5d8f7404b9d2": {
-          "type": "custom",
-          "settings": {
-            "code": "<div>\n<pstyle=\"display:inline;\" >Comes With: <\/p>\n<img width=\"120\" style=\"display:inline;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<img width=\"120\" style=\"display:inline;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<\/div>"
-          }
-        },
         "dac6ebe2-5572-4d3c-a284-a1a9abf98585": {
           "type": "complementary_products",
           "settings": {
@@ -94,6 +94,7 @@
         "price",
         "variant_picker",
         "81f8ff1d-7c21-47ff-8630-c684c9dd3b18",
+        "e9918fd8-7a79-403c-b472-5d8f7404b9d2",
         "sales_point",
         "inventory_status",
         "buy_buttons",
@@ -101,7 +102,6 @@
         "tab",
         "contact",
         "share",
-        "e9918fd8-7a79-403c-b472-5d8f7404b9d2",
         "dac6ebe2-5572-4d3c-a284-a1a9abf98585"
       ],
       "settings": {
@@ -140,6 +140,7 @@
       "settings": {
         "image_mask": "none",
         "image2_mask": "none",
+        "background_image": "none",
         "subtitle": "",
         "title": "Image with text",
         "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
@@ -160,6 +161,7 @@
       "settings": {
         "image_mask": "none",
         "image2_mask": "none",
+        "background_image": "none",
         "subtitle": "",
         "title": "Image with text",
         "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
