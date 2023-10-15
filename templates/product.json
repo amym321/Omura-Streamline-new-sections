@@ -105,7 +105,7 @@
         "dac6ebe2-5572-4d3c-a284-a1a9abf98585"
       ],
       "settings": {
-        "product_image_size": "large",
+        "product_image_size": "medium",
         "product_image_type": "slider",
         "thumbnail_height": "flexible",
         "product_zoom_enable": true,
