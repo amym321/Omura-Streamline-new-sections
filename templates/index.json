@@ -105,7 +105,8 @@
         "5f362a6b-9e12-44ba-b7c6-027f86b398a5": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>Convenient, discreet, and even sustainable, the Omura offers an elevated social experience.<\/p>",
+            "image": "shopify:\/\/shop_images\/Uresta-logo.png",
             "author": "Author's name"
           }
         },
