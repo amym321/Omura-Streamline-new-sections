@@ -1,201 +1,135 @@
-{% comment %}
-  This sections requires the same `paginate_by` variable value as
-  the other sections for the ajax loading to work.
-  If you change the number below, it must also be changed in:
-  - sections/collection-template
-  - sections/featured-collection-slider
-  - snippets/page-block-featured-collection-slider
-{% endcomment %}
-{%- liquid
-  assign paginate_by = 24
-  assign ajax_paginate = false
-  assign collection_count = 0
-
-  assign collection = collections[section.settings.home_featured_products]
-  if collection != blank
-    assign collection_count = collection.all_products_count
-
-    if collection_count > paginate_by
-      assign ajax_paginate = true
-    endif
-  endif
--%}
-
-{%- assign grid_item_width = 'grid-product--small' -%}
-{%- assign scrollable = true -%}
-{%- case section.settings.per_row -%}
-  {%- when 'small' -%}
-    {%- if collection_count <= 3 -%}
-      {%- assign scrollable = false -%}
-    {%- endif -%}
-    {%- assign sizeVariable = '27vw' -%}
-    {%- assign fallback = '63vw' -%}
-  {%- when 'medium' -%}
-    {%- assign grid_item_width = 'grid-product--medium' -%}
-    {%- assign sizeVariable = '21vw' -%}
-    {%- assign fallback = '53vw' -%}
-  {%- when 'large' -%}
-    {%- assign grid_item_width = 'grid-product--large' -%}
-    {%- assign sizeVariable = '17vw' -%}
-    {%- assign fallback = '37vw' -%}
-{%- endcase -%}
-
-<div class="index-section index-section--overflow-scroller{% if section.settings.alt %} index-section--alt{% endif %}">
+<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %}">
 
   <div
-    id="CollectionSection-{{ section.id }}"
+    class="page-width text-{{ section.settings.align_text }}"
     data-section-id="{{ section.id }}"
-    data-section-type="featured-collection"
-    data-scrollable="true"
-    data-product-sliders-mobile="false"
-    data-paginate="{{ ajax_paginate }}"
-    data-paginate-by="{{ paginate_by }}"
-    data-collection-url="{{ collection.url }}"
-    data-collection-count="{{ collection.all_products_count }}"
-    data-grid-item-width="{{ grid_item_width }}"
-    {% if section.settings.per_row == 'small' and collection.all_products_count <= 3 %} data-center-grid{% endif %}
-    data-aos>
+    data-section-type="testimonials">
     {%- if section.settings.title != blank -%}
-      <div class="page-width">
-        <header class="section-header" data-aos>
-          <h2 class="section-header__title appear-delay">
-            {{ section.settings.title }}
-          </h2>
-          {%- if section.settings.description != blank -%}
-            <div class="rte section-header__description section-header__description--large appear-delay-1">
-              {{ section.settings.description }}
-            </div>
-          {%- endif -%}
-        </header>
-      </div>
+      <header class="section-header" data-aos>
+        <h2 class="section-header__title appear-delay">
+          {{ section.settings.title | escape }}
+        </h2>
+      </header>
     {%- endif -%}
 
-    <div class="overflow-scroll-wrap" data-ajax-loader>
-      <button
-        type="button"
-        class="btn btn--tertiary overflow-scroller__arrow overflow-scroller__arrow--left overflow-scroller--disable-left small--hide"
-        {% unless scrollable %}hidden{% endunless %}
-        aria-hidden="true"
-        aria-label="{{ 'general.pagination.previous' | t }}"
-        data-arrow>
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><title>icon-chevron-left</title><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0Z"/></svg>
-      </button>
-      <button
-        type="button"
-        class="btn btn--tertiary overflow-scroller__arrow overflow-scroller__arrow--right small--hide"
-        {% unless scrollable %}hidden{% endunless %}
-        aria-hidden="true"
-        aria-label="{{ 'general.pagination.next' | t }}"
-        data-arrow>
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><title>icon-chevron</title><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98Z"/></svg>
-      </button>
-      <div
-        class="overflow-scroller"
-        data-pagination-wrapper>
-        <div
-          class="grid grid--uniform grid--scattered-large-2 grid--scattered-small-2"
-          data-aos="overflow__animation"
-          data-product-container>
-
-          {%- if
-            section.settings.home_featured_products == blank
-            or collections[section.settings.home_featured_products].empty?
-            or collections[section.settings.home_featured_products].products_count == 0 -%}
-
-            {%- for i in (1..paginate_by) -%}
-              <div class="grid__item grid-product {{ grid_item_width }}{% if settings.product_hover_details %} grid-product__hover-details{% endif %}">
-                <div class="grid-product__content">
-                  <a href="{{ product.url | within: collection }}" class="grid-product__link {% if sold_out %} grid-product__link--disabled{% endif %}">
-                    <div class="product-slider"
-                      data-image-count="1"
-                      data-id="1234">
-                      <div class="product-slide">
-                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-                        <div class="image-wrap">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                      </div>
+    {%- if section.blocks.size > 0 -%}
+      <div class="slideshow-wrapper">
+        <div class="testimonials-slider" id="Testimonials-{{ section.id }}" data-count="{{ section.blocks.size }}">
+          {%- for block in section.blocks -%}
+            <div
+              class="testimonials-slide testimonials-slide--{{ block.id }}"
+              data-aos
+              {{ block.shopify_attributes }}>
+              <blockquote class="testimonials-slider__text">
+                <span class="quote-icon"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-quote" viewBox="0 0 41 35"><path d="M10.208 17.711h6.124v16.332H0V21.684C0 8.184 5.444.956 16.332 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Zm24.498 0h6.124v16.332H24.498V21.684C24.498 8.184 29.942.956 40.83 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Z" fill-rule="evenodd"/></svg></span>
+                {%- if block.settings.testimonial != blank -%}
+                  <div class="rte-setting text-spacing">{{ block.settings.testimonial }}</div>
+                {%- endif -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="testimonial-image{% if section.settings.round_images %} testimonial-image--round{% endif %}">
+                    <div class="image-wrap text-spacing"
+                      {% if section.settings.round_images == false %}
+                        style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
+                      {% endif %}
+                    >
+                      {%- render 'image-element',
+                        img: block.settings.image,
+                        sizes: '80px',
+                        widths: '180, 360, 540, 750, 900, 1080',
+                      -%}
                     </div>
-                    <div class="grid-product__meta">
-                      <div class="grid-product__title">{{ 'home_page.onboarding.product_title' | t }}</div>
-                      <div class="grid-product__price">$29</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            {%- endfor -%}
-
-          {%- else -%}
-
-            {%- for product in collections[section.settings.home_featured_products].products limit: paginate_by -%}
-              {%- render 'product-grid-item'
-                product: product,
-                collection: collection,
-                grid_item_width: grid_item_width,
-                sizeVariable: sizeVariable,
-                fallback: fallback,
-              -%}
-            {%- endfor -%}
-
-          {%- endif -%}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.author != blank -%}
+                  <cite>{{ block.settings.author | escape }}</cite>
+                {%- endif -%}
+              </blockquote>
+            </div>
+          {%- endfor -%}
         </div>
       </div>
-    </div>
+    {%- endif -%}
   </div>
 
 </div>
 
 {% schema %}
 {
-  "name": "Image & Testimonial",
+  "name": "t:sections.testimonials.name",
+  "max_blocks": 10,
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "t:sections.featured-collection-slider.settings.title.label",
-      "default": "Featured collection"
-    },
-    {
-      "type": "text",
-      "id": "description",
-      "label": "t:sections.featured-collection-slider.settings.description.label"
-    },
-    {
-      "type": "collection",
-      "id": "home_featured_products",
-      "label": "t:sections.featured-collection-slider.settings.home_featured_products.label"
+      "label": "t:sections.testimonials.settings.title.label",
+      "default": "Testimonials"
     },
     {
       "type": "select",
-      "id": "per_row",
-      "label": "t:sections.featured-collection-slider.settings.per_row.label",
-      "default": "small",
+      "id": "align_text",
+      "label": "t:sections.testimonials.settings.align_text.label",
+      "default": "center",
       "options": [
         {
-          "value": "small",
-          "label": "3"
+          "value": "left",
+          "label": "t:sections.testimonials.settings.align_text.options.left.label"
         },
         {
-          "value": "medium",
-          "label": "4"
-        },
-        {
-          "value": "large",
-          "label": "5"
+          "value": "center",
+          "label": "t:sections.testimonials.settings.align_text.options.center.label"
         }
-      ],
-      "info": "t:sections.featured-collection-slider.settings.per_row.info"
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "round_images",
+      "label": "t:sections.testimonials.settings.round_images.label",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "alt",
-      "label": "t:sections.featured-collection-slider.settings.alt.label"
+      "label": "t:sections.testimonials.settings.alt.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "t:sections.testimonials.blocks.testimonial.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "testimonial",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.testimonial.label",
+          "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "t:sections.testimonials.blocks.testimonial.settings.author.label",
+          "default": "Author's name"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Image & Testimonial"
+      "name": "t:sections.testimonials.presets.testimonials.name",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
     }
   ],
-  "blocks": [],
   "disabled_on": {
     "groups": ["footer", "header", "custom.popups"]
   }
