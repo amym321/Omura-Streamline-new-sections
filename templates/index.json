@@ -108,7 +108,7 @@
         "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-1": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>For the fine wine of vaping, turn to Omura.<\/p>",
             "image": "shopify:\/\/shop_images\/Manulife_logo_2018.png",
             "author": "Author's name"
           }
@@ -116,7 +116,7 @@
         "template--16187353891013__9b320625-b9d7-4f72-a405-131397642f91-testimonial-2": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>Convenient, discreet, and even sustainable, the Omura offers an elevated social experience.<\/p>",
             "image": "shopify:\/\/shop_images\/Uresta-logo.png",
             "author": "Author's name"
           }
@@ -148,6 +148,20 @@
             "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
             "author": "Author's name"
           }
+        },
+        "a498f1ab-9de6-4337-9e3f-8fb4bb05af53": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "aff9682e-34ea-4c75-9f04-4bcbdd1db23b": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
         }
       },
       "block_order": [
@@ -156,7 +170,9 @@
         "f5211c55-f89a-47df-b5e7-c3e3cd8971cf",
         "e4e0e496-cb7e-44b8-b83f-2f633f22479e",
         "bc57f6df-b653-4043-90f7-372117c55c68",
-        "79983f3a-161d-44fc-af66-95cc502783f7"
+        "79983f3a-161d-44fc-af66-95cc502783f7",
+        "a498f1ab-9de6-4337-9e3f-8fb4bb05af53",
+        "aff9682e-34ea-4c75-9f04-4bcbdd1db23b"
       ],
       "custom_css": [
 
