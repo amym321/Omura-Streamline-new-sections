@@ -97,7 +97,8 @@
         "38478bfe-1404-4910-ad68-ec68c279de79": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>For the fine wine of vaping, turn to Omura.<\/p>",
+            "image": "shopify:\/\/shop_images\/Manulife_logo_2018.png",
             "author": "Author's name"
           }
         },
