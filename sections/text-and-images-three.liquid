@@ -20,9 +20,9 @@
   {% endif %}
 {% endstyle %}
 
-<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} three-part">
+<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} three-panel">
 
-  <div class="page-width feature-row-wrapper feature-row--{{ image_width }}">
+  <div class=" feature-row-wrapper feature-row--{{ image_width }}"> {% comment %} page-width {% endcomment %}
     {%- capture image_layout -%}
       <div class="feature-row__item feature-row__images{% if overlap_images %} feature-row__item--overlap-images{% endif %} {% if placeholder_images %}feature-row__item--placeholder-images{% endif %}" data-aos>
           {%- if section.settings.image != blank -%}
@@ -57,6 +57,21 @@
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
             </div>
           {%- endif -%}
+          {%- if section.settings.image == blank and section.settings.image2 == blank -%}
+            <div class="placeholder-image-wrap">
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+            <div class="placeholder-image-wrap">
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+          {%- endif -%}
+      </div>
+
+      <div class="feature-row__item feature-row__images{% if overlap_images %} feature-row__item--overlap-images{% endif %} {% if placeholder_images %}feature-row__item--placeholder-images{% endif %}" data-aos>
           {%- if section.settings.image2 != blank -%}
             <div class="feature-row__second-image">
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
@@ -128,13 +143,48 @@
 
 </div>
 
+
+<style>
+  @media (min-width: 769px) {
+    .index-section.three-panel {
+      padding: 0;
+    }
+    .three-panel .feature-row {
+      margin: 0;
+    }
+    .three-panel .feature-row-wrapper .feature-row__text {
+      /* flex: 0 1 33%; */
+      padding:0 50px;
+      min-width: 33%;
+    }
+    .three-panel .feature-row__images  {
+      min-width: 33%;
+      padding:0;
+    }
+    .three-panel .feature-row__item--overlap-images>:first-child {
+      transform: unset;
+    }
+    .three-panel .feature-row__item--overlap-images .feature-row__first-image,
+    .three-panel .feature-row__item--overlap-images .feature-row__second-image {
+      width: 100%;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+
+  }
+</style>
+
+
+
 {% schema %}
 {
-  "name": "3-part Images with Text",
+  "name": "3-panel Images with Text",
   "settings": [
     {
       "type": "header",
-      "content": "3-part Images with Text"
+      "content": "3-panel Images with Text"
     },
     {
       "type": "image_picker",
@@ -392,7 +442,7 @@
   ],
   "presets": [
     {
-      "name": "3-part Images with Text"
+      "name": "3-panel Images with Text"
     }
   ],
   "disabled_on": {
