@@ -20,9 +20,9 @@
   {% endif %}
 {% endstyle %}
 
-<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %}">
+<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} image-text">
 
-  <div class="page-width feature-row-wrapper feature-row--{{ image_width }}">
+  <div class=" feature-row-wrapper feature-row--{{ image_width }}"> {% comment %} page-width {% endcomment %}
     {%- capture image_layout -%}
       <div class="feature-row__item feature-row__images{% if overlap_images %} feature-row__item--overlap-images{% endif %} {% if placeholder_images %}feature-row__item--placeholder-images{% endif %}" data-aos>
           {%- if section.settings.image != blank -%}
@@ -96,28 +96,31 @@
       </div>
     {%- endcapture -%}
 
-    <div class="feature-row">
+  <div class="feature-row {% if section.settings.background_image != 'none' %} background-image--{{section.settings.background_image}} {% endif %}"
+    {% if section.settings.background_image %} {% endif %}>
       {%- if section.settings.layout == 'left' -%}
         {{ image_layout }}
       {%- endif -%}
 
-      <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} text-{{ section.settings.align_text }}" data-aos>
-        {%- if section.settings.subtitle != blank -%}
-          <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
-        {%- endif -%}
-        {%- if section.settings.title != blank -%}
-          <h2 class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</h2>
-        {%- endif -%}
-        {%- if section.settings.text != blank -%}
-          <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
-        {%- endif -%}
-        {%- if section.settings.button_label != blank -%}
-          <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
-            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
-              {{ section.settings.button_label }}
-            </a>
-          </div>
-        {%- endif -%}
+      <div class="text-row-container">
+        <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} text-{{ section.settings.align_text }}" data-aos>
+          {%- if section.settings.subtitle != blank -%}
+            <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+          {%- if section.settings.text != blank -%}
+            <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
+          {%- endif -%}
+          {%- if section.settings.button_label != blank -%}
+            <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
+              <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+                {{ section.settings.button_label }}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
       </div>
 
       {%- if section.settings.layout == 'right' -%}
@@ -127,6 +130,56 @@
   </div>
 
 </div>
+
+
+<style>
+
+  .image-text  .btn {
+    background-color: unset;
+  }
+
+  .image-text .feature-row-background,
+  .image-text .background-image--beige,
+  .image-text .background-image--green {
+    background-size: contain;
+    background-position-x: 0%;
+  }
+  .image-text .background-image--beige {
+    background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Group_14.png?v=1697233256);
+  }
+  .image-text .background-image--green {
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Group_13.png?v=1697233250); */
+    background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/green-background.jpg?v=1697315622);
+  }
+
+  .image-text .feature-row__text {
+      padding-bottom: 40px;
+    }
+  @media (min-width: 769px) {
+    .image-text .feature-row {
+      margin: 0;
+    }
+    .image-text .text-row-container {
+      width: 50%;
+    }
+    .image-text .feature-row__text {
+      padding: 80px 100px 80px 80px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image-text .text-row-container {
+      order: 2;
+    }
+    .image-text .feature-row__images {
+      order: 1;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+</style>
+
 
 {% schema %}
 {
@@ -259,6 +312,30 @@
         {
           "value": "splat-4",
           "label": "t:common.image_mask.options.splat-4.label"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "background_image",
+      "label": "Select background",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "beige",
+          "label": "Beige"
+        },
+        {
+          "value": "green",
+          "label": "Green"
         }
       ]
     },
