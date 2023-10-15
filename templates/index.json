@@ -93,11 +93,46 @@
     },
     "91688e92-643b-46e5-ba26-a12a523f027c": {
       "type": "image-testimonial",
+      "blocks": {
+        "38478bfe-1404-4910-ad68-ec68c279de79": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "5f362a6b-9e12-44ba-b7c6-027f86b398a5": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "d65c2166-e301-4c78-a69b-46b609a2159e": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        },
+        "55ff0b0d-af77-4b5b-92b0-029eee60efd9": {
+          "type": "testimonial",
+          "settings": {
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name"
+          }
+        }
+      },
+      "block_order": [
+        "38478bfe-1404-4910-ad68-ec68c279de79",
+        "5f362a6b-9e12-44ba-b7c6-027f86b398a5",
+        "d65c2166-e301-4c78-a69b-46b609a2159e",
+        "55ff0b0d-af77-4b5b-92b0-029eee60efd9"
+      ],
       "settings": {
-        "title": "Featured collection",
-        "description": "",
-        "home_featured_products": "earrings",
-        "per_row": "small",
+        "title": "",
+        "align_text": "left",
+        "round_images": false,
         "alt": false
       }
     },
@@ -157,6 +192,7 @@
         "bc57f6df-b653-4043-90f7-372117c55c68",
         "79983f3a-161d-44fc-af66-95cc502783f7"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
