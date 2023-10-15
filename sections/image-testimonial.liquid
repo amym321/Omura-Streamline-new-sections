@@ -1,61 +1,197 @@
-<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %}">
+<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %}  image-testimonial">
 
-  <div
-    class="page-width text-{{ section.settings.align_text }}"
-    data-section-id="{{ section.id }}"
-    data-section-type="testimonials">
-    {%- if section.settings.title != blank -%}
-      <header class="section-header" data-aos>
-        <h2 class="section-header__title appear-delay">
-          {{ section.settings.title | escape }}
-        </h2>
-      </header>
-    {%- endif -%}
 
-    {%- if section.blocks.size > 0 -%}
-      <div class="slideshow-wrapper">
-        <div class="testimonials-slider" id="Testimonials-{{ section.id }}" data-count="{{ section.blocks.size }}">
-          {%- for block in section.blocks -%}
-            <div
-              class="testimonials-slide testimonials-slide--{{ block.id }}"
-              data-aos
-              {{ block.shopify_attributes }}>
-              <blockquote class="testimonials-slider__text">
-                <span class="quote-icon"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-quote" viewBox="0 0 41 35"><path d="M10.208 17.711h6.124v16.332H0V21.684C0 8.184 5.444.956 16.332 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Zm24.498 0h6.124v16.332H24.498V21.684C24.498 8.184 29.942.956 40.83 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Z" fill-rule="evenodd"/></svg></span>
-                {%- if block.settings.testimonial != blank -%}
-                  <div class="rte-setting text-spacing">{{ block.settings.testimonial }}</div>
-                {%- endif -%}
-                {%- if block.settings.image != blank -%}
-                  <div class="testimonial-image{% if section.settings.round_images %} testimonial-image--round{% endif %}">
-                    <div class="image-wrap text-spacing"
-                      {% if section.settings.round_images == false %}
-                        style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
-                      {% endif %}
-                    >
-                      {%- render 'image-element',
-                        img: block.settings.image,
-                        sizes: '80px',
-                        widths: '180, 360, 540, 750, 900, 1080',
-                      -%}
-                    </div>
+  <div class="image-testimonial-container">
+  
+    <div class="left-image" >
+      <img src="https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Mask_group.png">
+    </div>
+  
+    <div
+      class="page-width text-{{ section.settings.align_text }} right-testimonial"
+      data-section-id="{{ section.id }}"
+      data-section-type="testimonials">
+      {%- if section.settings.title != blank -%}
+        <header class="section-header" data-aos>
+          <h2 class="section-header__title appear-delay">
+            {{ section.settings.title | escape }}
+          </h2>
+        </header>
+      {%- endif -%}
+  
+      {%- if section.blocks.size > 0 -%}
+        <div class="slideshow-wrapper">
+          <div class="testimonials-slider" id="Testimonials-{{ section.id }}" data-count="{{ section.blocks.size }}">
+            {%- for block in section.blocks -%}
+              <div
+                class="testimonials-slide testimonials-slide--{{ block.id }}"
+                data-aos
+                {{ block.shopify_attributes }}>
+                <blockquote class="testimonials-slider__text">
+                  <div class="testimonials-slider__text-interior">
+                    <img src="https://cdn.shopify.com/s/files/1/0526/3700/8069/files/quotes.jpg?v=1697389240" 
+                      class="quote-icon">
+                    {% comment %} <span class="quote-icon"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-quote" viewBox="0 0 41 35"><path d="M10.208 17.711h6.124v16.332H0V21.684C0 8.184 5.444.956 16.332 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Zm24.498 0h6.124v16.332H24.498V21.684C24.498 8.184 29.942.956 40.83 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766Z" fill-rule="evenodd"/></svg></span> {% endcomment %}
+                    {%- if block.settings.testimonial != blank -%}
+                      <div class="rte-setting text-spacing text-block">{{ block.settings.testimonial }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.image != blank -%}
+                      <div class="testimonial-image{% if section.settings.round_images %} testimonial-image--round{% endif %}">
+                        <div class="image-wrap text-spacing"
+                          {% if section.settings.round_images == false %}
+                            style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
+                          {% endif %}
+                        >
+                          {%- render 'image-element',
+                            img: block.settings.image,
+                            sizes: '80px',
+                            widths: '180, 360, 540, 750, 900, 1080',
+                          -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
                   </div>
-                {%- endif -%}
-                {%- if block.settings.author != blank -%}
-                  <cite>{{ block.settings.author | escape }}</cite>
-                {%- endif -%}
-              </blockquote>
-            </div>
-          {%- endfor -%}
+                </blockquote>
+              </div>
+            {%- endfor -%}
+          </div>
         </div>
-      </div>
-    {%- endif -%}
+      {%- endif -%}
+    </div>
+  
   </div>
-
+  
 </div>
+
+
+<style>
+  .index-section.image-testimonial {
+    background-color: #fff8f6;
+  }
+  @media (min-width: 769px) {
+  .index-section .image-testimonial-container {
+    display: flex;
+  }
+  }
+  .index-section .left-image {
+    width: 35%;
+  }
+  .index-section .right-testimonial {
+    width: 65%;
+    min-height: 450px;
+  }
+  @media (max-width: 768px) {
+    .index-section .left-image,
+    .index-section .right-testimonial {
+      width: 100%;
+    }
+  }
+  @media (min-width: 769px) {
+  .image-testimonial .testimonials-slide {
+      width: 42%;
+    }
+  }
+  .image-testimonial .index-section {
+    background-color: #FFF8F6;
+  }
+  @media (min-width: 769px) {
+
+    .image-testimonial .slideshow-wrapper {
+      transform: translateY(40%);
+    }
+  }
+  @media (max-width: 768px) {
+    .image-testimonial .slideshow-wrapper {
+      /* transform: translateY(10%); */
+      margin: 50px 0 70px;
+    }
+  }
+  .image-testimonial   .flickity-viewport {
+    /* height: 340px; */
+    height: 350px;
+  }
+  .image-testimonial .testimonials-slider__text {
+    /* background-color: #fff;
+      margin-left: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding: 20px 0; */
+
+    /* min-height: 407px; */
+    min-height: 330px;
+    /* min-height: 350px; */
+  }
+  .image-testimonial .testimonials-slider__text-interior {
+    padding: 0 15px;
+    background-color: #fff;
+    margin: 0 15px;
+    /* min-height: 380px; */
+    min-height: 310px;
+    position: absolute;
+    top: 0;
+  }
+
+  .image-testimonial .testimonials-slider__text .quote-icon {
+    left: 15px;
+    min-height: 50px;
+    opacity: 1;
+    top: 20px;
+  }
+
+  /* .image-testimonial  .text-spacing { */
+  .image-testimonial  .text-block {
+    margin-bottom: 0;
+    margin-top: 90px;
+    /* margin-top: 65px; */
+    /* margin-top: 30px; */
+  }
+  .image-testimonial .testimonial-image {
+    max-width: unset;
+  }
+  .image-testimonial .image-element {
+    min-height: 40px;
+  }
+  .image-testimonial .text-block {
+    min-height:170px;
+    /* min-height:140px; */
+  }
+  .image-testimonial .testimonial-image .image-wrap {
+    margin-bottom: 0;
+
+        /* padding-bottom: unset;
+        margin-top:unset; */
+  }
+  .image-testimonial .testimonial-image img {
+    height: 60%;
+    width: unset;
+  }
+  .image-testimonial  .flickity-page-dots {
+    text-align: left;
+  }
+  /* .image-testimonial .flickity-page-dots:before {
+    display: block;
+    height: 20px;
+    content: "";
+    margin-top: 20px;
+  } */
+  .image-testimonial .flickity-page-dots .dot {
+    width:20px;
+    height:20px;
+    border: 3px solid currentColor;
+    background-color: unset;
+  }
+  .image-testimonial .flickity-page-dots .dot.is-selected {
+    width:20px;
+    height:20px;
+    background-color: currentColor;
+    border: 3px solid currentColor;
+  }
+</style>
+
 
 {% schema %}
 {
-  "name": "t:sections.testimonials.name",
+  "name": "Image & Testimonial",
   "max_blocks": 10,
   "settings": [
     {
@@ -119,7 +255,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.testimonials.presets.testimonials.name",
+      "name": "Image & Testimonials",
       "blocks": [
         {
           "type": "testimonial"
@@ -135,3 +271,4 @@
   }
 }
 {% endschema %}
+  

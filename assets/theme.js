@@ -7868,13 +7868,17 @@ matchMedia(theme.config.mediaQuerySmall).addListener(function(mql) {
     return FeaturedCollection;
   })();
   
+
+  // Testimonials start at cellAlign: 'left' - am
   theme.Testimonials = (function() {
     var defaults = {
       adaptiveHeight: false,
       avoidReflow: true,
       pageDots: true,
       prevNextButtons: false,
-      wrapAround: true
+      wrapAround: true,
+
+      cellAlign: 'left'  // - am
     };
   
     function Testimonials(container) {
