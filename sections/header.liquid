@@ -93,18 +93,24 @@
     <header
       class="site-header{% if section.settings.logo_hide_mobile %}{% unless template_name == 'index' %} small--hide{% endunless %}{% endif %}"
       data-overlay="{{ overlay_header }}">
-      <div class="page-width">
+      <div class="page-width header-width">
+
+        {% comment %} add logo/text - am{% endcomment %}
+        <div class="header-item header-item--logo" >
+          {%- render 'header-logo-block', section: section -%}
+        </div>
+
         <div
           class="header-layout header-layout--{{ menu_alignment }}{% if mobile_logo_only %} header-layout--mobile-logo-only{% endif %}"
           data-logo-align="{{ logo_alignment }}">
 
           {%- if logo_alignment == 'left' or logo_alignment == 'left-right' -%}
             <div class="header-item header-item--logo">
-              {%- render 'header-logo-block', section: section -%}
+                {% comment %} remove original logo/text - am{% endcomment %}
             </div>
           {%- endif -%}
 
-          {%- if logo_alignment == 'left' -%}
+          {%- if logo_alignment == 'left' -%} {% comment %} logo left, menu center - am {% endcomment %}
             <div role="navigation" aria-label="Primary"
               class="header-item header-item--navigation{% if menu_alignment == 'left-center' %} text-center{% endif %} small--hide">
               {%- render 'header-desktop-nav', main_menu: main_menu, hover_menu: section.settings.hover_menu -%}
@@ -199,6 +205,31 @@
 {%- if section.settings.header_search_enable -%}
   {%- render 'search-modal' -%}
 {%- endif -%}
+
+
+<style>
+  @media (min-width:769px) {
+    .header-wrapper .header-width {
+      max-width: unset;
+      padding: unset;
+    }
+    .header-wrapper .site-header {
+      padding: 10px 0 15px;
+    }
+    .header-wrapper .header-item--logo {
+      padding-bottom: 5px;
+      justify-content: center;
+      border-bottom: solid #f2f2f2 2px;
+    }
+    .header-wrapper .header-layout {
+      padding-top: 5px;
+    }
+    .header-wrapper .header-item--icons .site-nav {
+      margin-right: 30px;
+    }
+  }
+</style>
+
 
 {% schema %}
 {
