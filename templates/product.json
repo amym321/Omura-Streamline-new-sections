@@ -32,7 +32,7 @@
         "e9918fd8-7a79-403c-b472-5d8f7404b9d2": {
           "type": "custom",
           "settings": {
-            "code": "<div style=\"display:flex;\">\n<p style=\"display:inline; margin-right:15px;\" >Comes With: <\/p>\n<img width=\"120\" style=\"display:inline;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<img width=\"120\" style=\"display:inline; margin-left:10px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<\/div>"
+            "code": "<div class=\"comes-with\" style=\"display:flex;\">\n<p class=\"comes-with-p\" style=\"display:inline; margin-right:15px;\" >Comes With: <\/p>\n<img class=\"comes-with-img-1\" width=\"120\" style=\"display:inline;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<img class=\"comes-with-img-2\" width=\"120\" style=\"display:inline; margin-left:10px;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<\/div>"
           }
         },
         "0fe0f5ae-c006-461e-858e-ca31502a50ec": {
