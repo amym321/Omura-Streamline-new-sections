@@ -22,6 +22,18 @@
             "color_swatches": false
           }
         },
+        "0fe0f5ae-c006-461e-858e-ca31502a50ec": {
+          "type": "separator",
+          "settings": {
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "checkmark",
+            "text": "One Year Warranty"
+          }
+        },
         "81f8ff1d-7c21-47ff-8630-c684c9dd3b18": {
           "type": "trust_badge",
           "disabled": true,
@@ -33,18 +45,6 @@
           "type": "custom",
           "settings": {
             "code": "<div class=\"comes-with\">\n<div class=\"comes-with-p-container\">\n<p class=\"comes-with-p\">Comes With: <\/p>\n<\/div>\n<div class=\"comes-with-img-container\">\n<img class=\"comes-with-img-1\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<img class=\"comes-with-img-2\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0526\/3700\/8069\/files\/omura_1.png?v=1697233287\">\n<\/div>\n<\/div>"
-          }
-        },
-        "0fe0f5ae-c006-461e-858e-ca31502a50ec": {
-          "type": "separator",
-          "settings": {
-          }
-        },
-        "sales_point": {
-          "type": "sales_point",
-          "settings": {
-            "icon": "checkmark",
-            "text": "One Year Warranty"
           }
         },
         "inventory_status": {
@@ -104,10 +104,10 @@
         "price",
         "31762c09-695a-4728-9ee4-3fbae49e0433",
         "variant_picker",
-        "81f8ff1d-7c21-47ff-8630-c684c9dd3b18",
-        "e9918fd8-7a79-403c-b472-5d8f7404b9d2",
         "0fe0f5ae-c006-461e-858e-ca31502a50ec",
         "sales_point",
+        "81f8ff1d-7c21-47ff-8630-c684c9dd3b18",
+        "e9918fd8-7a79-403c-b472-5d8f7404b9d2",
         "inventory_status",
         "buy_buttons",
         "description",
