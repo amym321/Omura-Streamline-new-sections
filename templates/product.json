@@ -8,6 +8,12 @@
           "settings": {
           }
         },
+        "ba8b5721-fe7f-465c-8450-859c79778355": {
+          "type": "text",
+          "settings": {
+            "text": "Whole Flower"
+          }
+        },
         "31762c09-695a-4728-9ee4-3fbae49e0433": {
           "type": "separator",
           "settings": {
@@ -106,6 +112,7 @@
       },
       "block_order": [
         "price",
+        "ba8b5721-fe7f-465c-8450-859c79778355",
         "31762c09-695a-4728-9ee4-3fbae49e0433",
         "variant_picker",
         "0fe0f5ae-c006-461e-858e-ca31502a50ec",
