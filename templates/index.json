@@ -249,6 +249,49 @@
         "direction": "left",
         "speed": 200
       }
+    },
+    "6bbda71d-56e8-40b6-911c-b416384ff674": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "Large image with text box",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "desktop_size": 0,
+        "color_border": "#f4f4f4",
+        "layout": "left",
+        "lazyload_images": true
+      }
+    },
+    "c6537776-db5d-497b-96cd-4ecca0f51ca2": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16187353891013__c6537776-db5d-497b-96cd-4ecca0f51ca2-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide title.",
+            "title_size": 80,
+            "subheading": "And an optional subheading",
+            "link": "",
+            "link_text": "Optional button",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/image_28_b.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--16187353891013__c6537776-db5d-497b-96cd-4ecca0f51ca2-image-1"
+      ],
+      "settings": {
+        "style": "arrows",
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
     }
   },
   "order": [
@@ -260,6 +303,8 @@
     "91688e92-643b-46e5-ba26-a12a523f027c",
     "9b320625-b9d7-4f72-a405-131397642f91",
     "slideshow",
-    "scrolling-text"
+    "scrolling-text",
+    "6bbda71d-56e8-40b6-911c-b416384ff674",
+    "c6537776-db5d-497b-96cd-4ecca0f51ca2"
   ]
 }
