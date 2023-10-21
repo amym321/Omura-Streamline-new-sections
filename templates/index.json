@@ -293,6 +293,56 @@
         "autoplay_speed": 7,
         "lazyload_images": true
       }
+    },
+    "7d4871b1-1241-43be-9a18-514e24485135": {
+      "type": "featured-product",
+      "blocks": {
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-price-1": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-description-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-variant_picker-1": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-price-1",
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-description-1",
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-variant_picker-1",
+        "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-buy_buttons-1"
+      ],
+      "settings": {
+        "featured_product": "artisan-pearl-earrings",
+        "product_image_size": "medium",
+        "product_image_type": "slider",
+        "product_zoom_enable": false,
+        "enable_video_looping": true,
+        "product_video_style": "muted",
+        "sku_enable": false
+      }
     }
   },
   "order": [
@@ -306,6 +356,7 @@
     "slideshow",
     "scrolling-text",
     "6bbda71d-56e8-40b6-911c-b416384ff674",
-    "c6537776-db5d-497b-96cd-4ecca0f51ca2"
+    "c6537776-db5d-497b-96cd-4ecca0f51ca2",
+    "7d4871b1-1241-43be-9a18-514e24485135"
   ]
 }
