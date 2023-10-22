@@ -23,7 +23,7 @@
 <div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} image-text">
 
   <div class=" feature-row-wrapper feature-row--{{ image_width }}"> {% comment %} page-width {% endcomment %}
-    <div id="overlay">
+    <div id="overlay" class="overlay--{{section.settings.layout}}">
       <div id="overlay-grid-1"></div>
       <div id="overlay-grid-2"></div>
       <div id="overlay-grid-3"></div>
@@ -142,17 +142,26 @@
 <style>
 
 /* background linear gradient */
-
 .image-text .feature-row-wrapper{
   display: grid;
   grid-template-columns: 1fr;
 }
 .image-text #overlay {
-  /* background-color: rgba(0,0,0,0.5); */
   z-index: 2;
   grid-template-columns: 25% 25% 25% 25%;
   display: grid;
 }
+@media (max-width: 768px) {
+  .image-text .overlay--left {
+    grid-template-columns: 0% 0% 50% 50% !important;
+  }
+}
+@media (max-width: 768px) {
+  .image-text .overlay--right {
+    grid-template-columns: 50% 50% 0% 0% !important;
+  }
+}
+
 .image-text #overlay,
 .image-text .feature-row {
   grid-row-start: 1;
@@ -184,7 +193,7 @@
   background: linear-gradient( rgba(68,112,100,255), rgba(110,142,133,255) );
 }
 
-
+/* end background linear gradient */
 
 
   .image-text  .btn {
