@@ -23,6 +23,13 @@
 <div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} image-text">
 
   <div class=" feature-row-wrapper feature-row--{{ image_width }}"> {% comment %} page-width {% endcomment %}
+    <div id="overlay">
+      <div id="overlay-grid-1"></div>
+      <div id="overlay-grid-2"></div>
+      <div id="overlay-grid-3"></div>
+      <div id="overlay-grid-4"></div>
+    </div>
+
     {%- capture image_layout -%}
       <div class="feature-row__item feature-row__images{% if overlap_images %} feature-row__item--overlap-images{% endif %} {% if placeholder_images %}feature-row__item--placeholder-images{% endif %}" data-aos>
           {%- if section.settings.image != blank -%}
@@ -134,6 +141,52 @@
 
 <style>
 
+/* background linear gradient */
+
+.image-text .feature-row-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.image-text #overlay {
+  /* background-color: rgba(0,0,0,0.5); */
+  z-index: 2;
+  grid-template-columns: 25% 25% 25% 25%;
+  display: grid;
+}
+.image-text #overlay,
+.image-text .feature-row {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.image-text .feature-row {
+  background: #ffffff00;
+}
+.image-text .feature-row__images,
+.image-text .text-row-container {
+  background: #ffffff00;
+  z-index: 3;
+}
+
+.image-text #overlay-grid-1 {
+  z-index: 2;
+  background: linear-gradient(rgba(219,220,211,234), rgba(239,240,235,227) );
+}
+.image-text #overlay-grid-2 {
+  z-index: 2;
+  background: linear-gradient(rgba(239,240,235,227)  , rgba(219,220,211,234));
+}
+.image-text #overlay-grid-3 {
+  z-index: 2;
+  background: linear-gradient( rgba(110,142,133,255), rgba(68,112,100,255) );
+}
+.image-text #overlay-grid-4 {
+  z-index: 2;
+  background: linear-gradient( rgba(68,112,100,255), rgba(110,142,133,255) );
+}
+
+
+
+
   .image-text  .btn {
     background-color: unset;
   }
@@ -145,11 +198,11 @@
     background-position-x: 0%;
   }
   .image-text .background-image--beige {
-    background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Group_14.png?v=1697233256);
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Group_14.png?v=1697233256); */
   }
   .image-text .background-image--green {
     /* background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/Group_13.png?v=1697233250); */
-    background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/green-background.jpg?v=1697315622);
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0526/3700/8069/files/green-background.jpg?v=1697315622); */
   }
 
   .image-text .feature-row__text {
@@ -319,6 +372,15 @@
       "type": "header",
       "content": "Background Image"
     },
+
+
+    {
+      "type": "image_picker",
+      "id": "background_image_2",
+      "label": "color background image"
+    },
+
+
     {
       "type": "select",
       "id": "background_image",
