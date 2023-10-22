@@ -223,14 +223,26 @@
             "title": "Frequently asked question",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
           }
+        },
+        "96f41a47-0905-40a4-af93-d69b9cf23032": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
         }
       },
       "block_order": [
         "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-1",
-        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2"
+        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2",
+        "96f41a47-0905-40a4-af93-d69b9cf23032"
       ],
       "settings": {
-        "title": "FAQs with Text"
+        "title": "FAQs with Text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "VIEW ALL FAQS",
+        "button_link": "",
+        "button_style": "secondary"
       }
     },
     "product-recommendations": {
