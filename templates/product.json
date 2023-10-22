@@ -166,6 +166,7 @@
     },
     "b4befc00-9b51-4080-80d6-22703498116e": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Large image with text box",
@@ -180,6 +181,7 @@
     },
     "8889af03-8854-4e72-897c-b71009e2000e": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Large image with text box",
@@ -190,20 +192,6 @@
         "color_border": "#f4f4f4",
         "layout": "left",
         "lazyload_images": true
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "disabled": true,
-      "settings": {
-        "product_recommendations_heading": "You may also like",
-        "related_count": 14
-      }
-    },
-    "collection-return": {
-      "type": "collection-return",
-      "disabled": true,
-      "settings": {
       }
     },
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5": {
@@ -219,17 +207,17 @@
         "alt": false
       }
     },
-    "df678077-6d65-4c6f-82ec-f68c0961ee27": {
-      "type": "faq",
+    "578094fe-0bf8-43ec-a4d8-b47851107d07": {
+      "type": "faq-with-text",
       "blocks": {
-        "template--16187354251461__df678077-6d65-4c6f-82ec-f68c0961ee27-question-1": {
+        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-1": {
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
           }
         },
-        "template--16187354251461__df678077-6d65-4c6f-82ec-f68c0961ee27-question-2": {
+        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2": {
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
@@ -238,11 +226,25 @@
         }
       },
       "block_order": [
-        "template--16187354251461__df678077-6d65-4c6f-82ec-f68c0961ee27-question-1",
-        "template--16187354251461__df678077-6d65-4c6f-82ec-f68c0961ee27-question-2"
+        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-1",
+        "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2"
       ],
       "settings": {
-        "title": "FAQs"
+        "title": "FAQs with Text"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 14
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
       }
     }
   },
@@ -252,9 +254,9 @@
     "background-image-text",
     "b4befc00-9b51-4080-80d6-22703498116e",
     "8889af03-8854-4e72-897c-b71009e2000e",
-    "product-recommendations",
-    "collection-return",
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5",
-    "df678077-6d65-4c6f-82ec-f68c0961ee27"
+    "578094fe-0bf8-43ec-a4d8-b47851107d07",
+    "product-recommendations",
+    "collection-return"
   ]
 }
