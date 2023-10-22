@@ -1,182 +1,327 @@
 {%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
 
-  <div class="page-width page-width--narrow">
-  
-    {%- if section.settings.title != blank -%}
-      <header class="section-header">
-        <h2 class="section-header__title">
-          {{ section.settings.title | escape }}
-        </h2>
-      </header>
-    {%- endif -%}
-  
-    {%- if section.blocks.size > 0 -%}
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {% for block in section.blocks %}
+  <div class="page-width  faq-with-text">
+
+    <div class="faq-with-text--text" >
+      <div class="faq-with-text--text-container">
+        {%- if section.settings.title != blank -%}
+          <header class="section-header">
+            <h2 class="section-header__title">
+              {{ section.settings.title | escape }}
+            </h2>
+          </header>
+        {%- endif -%}
+
+        {% comment %} <div class="rte appear-delay-1"><p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p></div> {% endcomment %}
+        {%- if section.settings.text != blank -%}
+          <div class="">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <div class="">
+            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="faq-with-text--faq">
+      <div class="faq-with-text--faq-container">
+        {%- if section.blocks.size > 0 -%}
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'question' %}
+                      {
+                        "@type": "Question",
+                        "name": {{ block.settings.title | json }},
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": {{ block.settings.text | json }}
+                        }
+                      }{% unless forloop.last %},{% endunless %}
+                  {% endcase %}
+                {% endfor %}
+              ]
+            }
+          </script>
+      
+          {%- for block in section.blocks -%}
+            <div {{ block.shopify_attributes }}>
               {% case block.type %}
-                {% when 'question' %}
-                  {
-                    "@type": "Question",
-                    "name": {{ block.settings.title | json }},
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": {{ block.settings.text | json }}
-                    }
-                  }{% unless forloop.last %},{% endunless %}
-              {% endcase %}
-            {% endfor %}
-          ]
-        }
-      </script>
-  
-      {%- for block in section.blocks -%}
-        <div {{ block.shopify_attributes }}>
-          {% case block.type %}
-            {% when 'rich-text'%}
-              <div class="index-section index-section--faq">
-                <div class="text-{{ block.settings.align_text }}">
-                  <div class="grid">
-                    <div class="grid__item{% if block.settings.narrow_column %} medium-up--three-quarters medium-up--push-one-eighth{% endif %}">
-                      {%- if block.settings.title != blank -%}
-                        <p class="h2">
-                          {{ block.settings.title | escape }}
-                        </p>
-                      {% endif %}
-                      {% if block.settings.text != blank %}
-                        <div class="rte">
-                          {% if block.settings.enlarge_text %}<div class="enlarge-text">{% endif %}
-                            {{ block.settings.text }}
-                          {% if block.settings.enlarge_text %}</div>{% endif %}
+                {% when 'rich-text'%}
+                  <div class="index-section index-section--faq">
+                    <div class="text-{{ block.settings.align_text }}">
+                      <div class="grid">
+                        <div class="grid__item{% if block.settings.narrow_column %} medium-up--three-quarters medium-up--push-one-eighth{% endif %}">
+                          {%- if block.settings.title != blank -%}
+                            <p class="h2">
+                              {{ block.settings.title | escape }}
+                            </p>
+                          {% endif %}
+                          {% if block.settings.text != blank %}
+                            <div class="rte">
+                              {% if block.settings.enlarge_text %}<div class="enlarge-text">{% endif %}
+                                {{ block.settings.text }}
+                              {% if block.settings.enlarge_text %}</div>{% endif %}
+                            </div>
+                          {% endif %}
+                          {%- if block.settings.link_text != blank -%}
+                            <div class="rte">
+                              <a href="{{ block.settings.link }}" class="btn">
+                                {{ block.settings.link_text }}
+                              </a>
+                            </div>
+                          {%- endif -%}
                         </div>
-                      {% endif %}
-                      {%- if block.settings.link_text != blank -%}
-                        <div class="rte">
-                          <a href="{{ block.settings.link }}" class="btn">
-                            {{ block.settings.link_text }}
-                          </a>
-                        </div>
-                      {%- endif -%}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-  
-            {% when 'question'%}
-              <div>
-                <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ block.id }}">
-                  {%- render 'collapsible-icons-alt', no_circle: true -%}
-                  <span>{{ block.settings.title }}</span>
-                </button>
-                <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all">
-                  <div class="collapsible-content__inner collapsible-content__inner--faq rte">
-                    {{ block.settings.text }}
+      
+                {% when 'question'%}
+                  <div class="question">
+                    <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ block.id }}">
+                      <span>{{ block.settings.title }}</span>
+                      {%- render 'collapsible-icons', no_circle: true -%}
+                    </button>
+                    <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all">
+                      <div class="collapsible-content__inner collapsible-content__inner--faq rte">
+                        {{ block.settings.text }}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-          {% endcase %}
-        </div>
-      {%- endfor -%}
-    {%- endif -%}
-  
-    {%- if section.blocks.size == 0 -%}
-      <div class="placeholder-noblocks">
-        {{ 'home_page.onboarding.no_content' | t }}
+              {% endcase %}
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      
+        {%- if section.blocks.size == 0 -%}
+          <div class="placeholder-noblocks">
+            {{ 'home_page.onboarding.no_content' | t }}
+          </div>
+        {%- endif -%}
       </div>
-    {%- endif -%}
+    </div>
+
   </div>
   
-  {%- if section.settings.divider -%}</div>{%- endif -%}
-  
-  {% schema %}
-  {
-    "name": "FAQ with Text",
-    "class": "index-section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "t:sections.faq.settings.title.label",
-        "default": "FAQs with Text"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "rich-text",
-        "name": "t:sections.faq.blocks.rich_text.name",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "t:sections.faq.blocks.rich_text.settings.title.label",
-            "default": "Rich text"
-          },
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "t:sections.faq.blocks.rich_text.settings.text.label",
-            "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>"
-          },
-          {
-            "type": "select",
-            "id": "align_text",
-            "label": "t:sections.faq.blocks.rich_text.settings.align_text.label",
-            "default": "left",
-            "options": [
-              {
-                "value": "left",
-                "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.left.label"
-              },
-              {
-                "value": "center",
-                "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.center.label"
-              },
-              {
-                "value": "right",
-                "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.right.label"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "question",
-        "name": "t:sections.faq.blocks.question.name",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "t:sections.faq.blocks.question.settings.title.label",
-            "default": "Frequently asked question"
-          },
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "t:sections.faq.blocks.question.settings.text.label",
-            "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "FAQ's with Text",
-        "blocks": [
-          {
-            "type": "question"
-          },
-          {
-            "type": "question"
-          }
-        ]
-      }
-    ],
-    "disabled_on": {
-      "groups": ["footer", "header", "custom.popups"]
-    }
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+
+<style>
+.index-section:has(>.faq-with-text) {
+  margin:0;
+  /* background-color:rgba(255, 0, 0, 0.5); */
+}
+@media (max-width:768px) {
+  .index-section:has(>.faq-with-text) {
+    padding: 60px 0;
   }
-  {% endschema %}
+}
+
+.faq-with-text {
+  padding: 0;
+}
+
+
+.faq-with-text--text {
+  background: linear-gradient(rgba(219,220,211,234), rgba(239,240,235,227) );
+}
+.faq-with-text--faq {
+  background: linear-gradient( rgba(239,240,235,227), rgba(219,220,211,234) );
+}
+
+@media (min-width:769px) {
+  .faq-with-text {
+    display:flex;
+    max-width: unset;
+  }
+
+  .faq-with-text--text {
+    padding: 120px 0;
+    width: 35%;
+    display: flex;
+    justify-content: right;
+  }
+  .faq-with-text--faq {
+    padding: 120px 0;
+    width: 65%;
+  }
+  .faq-with-text--text-container {
+    max-width: 455px;
+    min-width: 455px;
+    padding: 0 50px;
+  }
+  .faq-with-text--faq-container {
+    max-width: 845px;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width:768px) {
+  .faq-with-text--text {
+    padding: 60px 40px;  /* 60px 40px 0 */
+  }
+  .faq-with-text--faq {
+    padding: 60px 40px;
+  }
+}
+
+.faq-with-text .section-header {
+  text-align: left;
+}
+.faq-with-text  .question {
+  background-color: #fff;
+  margin-bottom: 10px;
+  /* padding-left: 15px; */
+}
+
+
+.faq-with-text .collapsible-trigger--inline {
+  width: 100%;
+  padding: 11px 35px 11px 35px;
+}
+.faq-with-text .collapsible-trigger--inline .collapsible-trigger__icon {
+  right: 15px !important;
+  left: unset;
+}
+.faq-with-text .collapsible-content {
+  padding: 0 35px;
+}
+@media (max-width:768px) {
+  .faq-with-text .collapsible-trigger--inline {
+    padding: 11px 35px 11px 20px;
+  }
+  .faq-with-text .collapsible-content {
+    padding: 0 20px;
+  }
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "FAQ with Text",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.faq.settings.title.label",
+      "default": "FAQs with Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.text-and-image.settings.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.text-and-image.settings.button_link.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "t:sections.text-and-image.settings.button_style.label",
+      "default": "secondary",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.text-and-image.settings.button_style.options.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.text-and-image.settings.button_style.options.secondary.label"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich-text",
+      "name": "t:sections.faq.blocks.rich_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq.blocks.rich_text.settings.title.label",
+          "default": "Rich text"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.faq.blocks.rich_text.settings.text.label",
+          "default": "<p>Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.</p>"
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "t:sections.faq.blocks.rich_text.settings.align_text.label",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.left.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.center.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.faq.blocks.rich_text.settings.align_text.options.right.label"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "t:sections.faq.blocks.question.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq.blocks.question.settings.title.label",
+          "default": "Frequently asked question"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.faq.blocks.question.settings.text.label",
+          "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ's with Text",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}
   
