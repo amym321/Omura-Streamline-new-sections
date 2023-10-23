@@ -15,7 +15,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "show_newsletter": true,
+        "show_newsletter": false,
         "newsletter_title": "Join the club",
         "newsletter_richtext": "",
         "show_locale_selector": true,
