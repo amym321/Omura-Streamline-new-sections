@@ -12,9 +12,44 @@
         "description": "<p>JOINT OUR HEAT-NOT-BURN MOVEMENT<\/p>"
       }
     },
-
     "footer-new": {
       "type": "footer-new",
+      "blocks": {
+        "2ef8f613-17fd-4654-afd2-982b0df6bfbb": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "e5b98a66-674a-4b5a-9e27-55213364f315": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        },
+        "1f59c0d3-db4e-493d-b40d-cddecb06718e": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Menu links",
+            "menu": "footer"
+          }
+        },
+        "62b5ba01-e740-48d8-8a9b-d87e94632ef3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Menu links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "2ef8f613-17fd-4654-afd2-982b0df6bfbb",
+        "e5b98a66-674a-4b5a-9e27-55213364f315",
+        "1f59c0d3-db4e-493d-b40d-cddecb06718e",
+        "62b5ba01-e740-48d8-8a9b-d87e94632ef3"
+      ],
       "settings": {
         "show_newsletter": false,
         "newsletter_title": "Join the club",
@@ -30,7 +65,6 @@
         "copyright_text": ""
       }
     }
-
   },
   "order": [
     "social",
