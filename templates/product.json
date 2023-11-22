@@ -106,6 +106,7 @@
         },
         "cf303a6f-7ce7-431e-a8fa-38569ab2cbc9": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/badge-double-image\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
           "settings": {
             "api_key": "",
             "store_hash": "",
@@ -189,9 +190,56 @@
         "lazyload_images": true
       }
     },
+    "ee38677f-f2ef-45ae-bc79-f42c9bbe386a": {
+      "type": "featured-product",
+      "blocks": {
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-buy_buttons-1"
+      ],
+      "settings": {
+        "featured_product": "",
+        "product_image_size": "medium",
+        "product_image_type": "stacked",
+        "product_zoom_enable": false,
+        "enable_video_looping": true,
+        "product_video_style": "muted",
+        "sku_enable": false
+      }
+    },
     "b4befc00-9b51-4080-80d6-22703498116e": {
       "type": "background-image-text",
-      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Large image with text box",
@@ -289,6 +337,7 @@
     "main",
     "sub",
     "background-image-text",
+    "ee38677f-f2ef-45ae-bc79-f42c9bbe386a",
     "b4befc00-9b51-4080-80d6-22703498116e",
     "8889af03-8854-4e72-897c-b71009e2000e",
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5",
