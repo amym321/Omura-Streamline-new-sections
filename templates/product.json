@@ -193,9 +193,19 @@
     "ee38677f-f2ef-45ae-bc79-f42c9bbe386a": {
       "type": "featured-product",
       "blocks": {
-        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1": {
-          "type": "price",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1": {
+          "type": "variant_picker",
           "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "0d511f5f-8ff7-415a-b88b-5866d259b57f": {
+          "type": "text",
+          "settings": {
+            "text": "Text block"
           }
         },
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1": {
@@ -204,13 +214,9 @@
             "is_tab": false
           }
         },
-        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1": {
-          "type": "variant_picker",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1": {
+          "type": "price",
           "settings": {
-            "variant_labels": true,
-            "picker_type": "button",
-            "product_dynamic_variants_enable": true,
-            "color_swatches": false
           }
         },
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-buy_buttons-1": {
@@ -223,9 +229,10 @@
         }
       },
       "block_order": [
-        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1",
-        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1",
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1",
+        "0d511f5f-8ff7-415a-b88b-5866d259b57f",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1",
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-buy_buttons-1"
       ],
       "settings": {
