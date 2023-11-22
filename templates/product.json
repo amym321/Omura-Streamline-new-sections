@@ -193,6 +193,18 @@
     "ee38677f-f2ef-45ae-bc79-f42c9bbe386a": {
       "type": "featured-product",
       "blocks": {
+        "0d511f5f-8ff7-415a-b88b-5866d259b57f": {
+          "type": "text",
+          "settings": {
+            "text": "Text block"
+          }
+        },
+        "946ddc92-2da1-42b9-926e-2cd61c55e168": {
+          "type": "text",
+          "settings": {
+            "text": "Text block"
+          }
+        },
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1": {
           "type": "variant_picker",
           "settings": {
@@ -202,20 +214,16 @@
             "color_swatches": false
           }
         },
-        "0d511f5f-8ff7-415a-b88b-5866d259b57f": {
-          "type": "text",
-          "settings": {
-            "text": "Text block"
-          }
-        },
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": false
           }
         },
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1": {
           "type": "price",
+          "disabled": true,
           "settings": {
           }
         },
@@ -229,18 +237,19 @@
         }
       },
       "block_order": [
-        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1",
         "0d511f5f-8ff7-415a-b88b-5866d259b57f",
+        "946ddc92-2da1-42b9-926e-2cd61c55e168",
+        "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-variant_picker-1",
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-description-1",
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-price-1",
         "template--16187354251461__ee38677f-f2ef-45ae-bc79-f42c9bbe386a-buy_buttons-1"
       ],
       "settings": {
-        "featured_product": "",
-        "product_image_size": "medium",
-        "product_image_type": "stacked",
+        "featured_product": "bloom-ring",
+        "product_image_size": "small",
+        "product_image_type": "slider",
         "product_zoom_enable": false,
-        "enable_video_looping": true,
+        "enable_video_looping": false,
         "product_video_style": "muted",
         "sku_enable": false
       }
