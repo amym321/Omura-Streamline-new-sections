@@ -73,7 +73,7 @@
 
                   <div class="social-section__wrapper">
                     <div class="image-wrap">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                    {% comment %} remove the detailes of IG post - am {% comment %} 
+                  {% comment %} remove the detailes of IG post - am {% endcomment %} 
                     {% comment %}
                     <div class="social-section__meta">
                       <div class="social-section__likes">
@@ -158,6 +158,10 @@
 <style>
   .social-section {
     margin: 60px 0 !important;
+  }
+  .social-section h2,
+  .social-section .section-header__title {
+    font-size: 64px !important;
   }
   .social-section .overflow-scroller .grid__item:first-child {
       margin-left: 0;
