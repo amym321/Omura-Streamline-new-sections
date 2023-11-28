@@ -30,7 +30,7 @@
     "type_header_line_height": 1.2,
     "type_base_font_family": "nunito_sans_n4",
     "type_product_capitalize": false,
-    "type_base_spacing": 50,
+    "type_base_spacing": 0,
     "type_base_size": 16,
     "type_base_line_height": 1.5,
     "type_navigation_size": 22,
