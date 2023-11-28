@@ -252,6 +252,7 @@
     },
     "6bbda71d-56e8-40b6-911c-b416384ff674": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "Large image with text box",
@@ -285,6 +286,7 @@
       "block_order": [
         "template--16187353891013__c6537776-db5d-497b-96cd-4ecca0f51ca2-image-1"
       ],
+      "disabled": true,
       "settings": {
         "style": "arrows",
         "desktop_size": 0,
@@ -334,6 +336,7 @@
         "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-variant_picker-1",
         "template--16187353891013__7d4871b1-1241-43be-9a18-514e24485135-buy_buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "featured_product": "artisan-pearl-earrings",
         "product_image_size": "medium",
