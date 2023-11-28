@@ -188,6 +188,7 @@
       "settings": {
         "subtitle": "",
         "title": "Release button",
+        "title2": "LEDs indicate the device heating",
         "text": "",
         "button_label": "",
         "button_link": "",
@@ -267,6 +268,7 @@
       "settings": {
         "subtitle": "VAPORIZES",
         "title": "Up to 98% of Cannabinoids",
+        "title2": "Second Heading",
         "text": "<p>The incredibly efficient Series 1 has been documented to cleanly vaporize up to 98% of cannabinoids and terpenes present in a single session.<\/p>",
         "button_label": "",
         "button_link": "",
