@@ -228,6 +228,9 @@
       "block_order": [
         "slideshow-0"
       ],
+      "custom_css": [
+        ".hero__text-shadow {max-width: 550px;}"
+      ],
       "settings": {
         "style": "arrows",
         "desktop_size": 0,
@@ -256,6 +259,7 @@
       "settings": {
         "subtitle": "",
         "title": "Large image with text box",
+        "title2": "Second Heading",
         "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
         "button_label": "",
         "button_link": "",
