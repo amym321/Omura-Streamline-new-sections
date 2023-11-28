@@ -181,7 +181,8 @@
       "type": "background-image-text",
       "custom_css": [
         ".background-media-text__aligner {margin-top: 200px;}",
-        ".background-media-text__text {background-color: #ffffff00; color: #fff;}"
+        ".background-media-text__text {background-color: #ffffff00; color: #fff;}",
+        "h1 {text-align: left;}"
       ],
       "settings": {
         "subtitle": "",
