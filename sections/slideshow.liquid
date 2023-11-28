@@ -174,6 +174,11 @@
                   <div class="page-width">
                     <div class="hero__text-content {{ block.settings.text_align }}">
                       <div class="hero__text-shadow" data-aos>
+                        {%- unless block.settings.subtitle == blank -%}
+                          <div class="hero__subtitle ">
+                            {{ block.settings.subtitle | escape }}
+                          </div>
+                        {%- endunless -%}
                         {%- unless block.settings.title == blank -%}
                           <h2 class="h1 hero__title">
                             {{ block.settings.title | newline_to_br }}
@@ -215,6 +220,24 @@
     </div>
   {%- endif -%}
 </div>
+
+
+<style>
+  @media (max-width:300px) {
+    .slideshow__slide .page-width {
+      padding:0;
+    }
+    .slideshow__slide .hero__text-content.vertical-center {
+      padding-top: 10px;
+    }
+    .slideshow__slide .hero__title {
+      margin:0 !important;
+    }
+  }
+</style>
+
+
+
 
 {% schema %}
 {
@@ -290,6 +313,12 @@
       "type": "image",
       "name": "t:sections.slideshow.blocks.slide.name",
       "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subheading",
+          "default": "A GAME CHANGING CONVECTION OVEN"
+        },
         {
           "type": "textarea",
           "id": "title",
