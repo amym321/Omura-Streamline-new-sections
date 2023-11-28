@@ -297,18 +297,32 @@
         "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-1": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "title": "Is Heat-Not-Burn the same as smoking?",
+            "text": "<p>No, Heat-Not-Burn, or vaporization, does not create smoke. Instead, the electric oven will heat the plant matter up to a temperature that is well below combustion but is high enough to cause the active ingredients to evaporate. This vapor is then inhaled through the Flowersticks allowing you to get all of the flavor and the benefits without the downsides of smoking.<\/p>"
           }
         },
         "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Are Flowersticks included with my Series 1 Complete Bundle purchase?",
+            "text": "<p>Yes, each Series 1 Complete Bundle comes with four packs of Fill Your Own Flowersticks.<\/p>"
+          }
+        },
+        "96f41a47-0905-40a4-af93-d69b9cf23032": {
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
           }
         },
-        "96f41a47-0905-40a4-af93-d69b9cf23032": {
+        "d2e69206-e55e-48d5-9d0d-a4c8aba5d91d": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "5d3028ff-b3d0-49c4-8c39-2dbfebbe4701": {
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
@@ -319,7 +333,9 @@
       "block_order": [
         "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-1",
         "template--16187354251461__578094fe-0bf8-43ec-a4d8-b47851107d07-question-2",
-        "96f41a47-0905-40a4-af93-d69b9cf23032"
+        "96f41a47-0905-40a4-af93-d69b9cf23032",
+        "d2e69206-e55e-48d5-9d0d-a4c8aba5d91d",
+        "5d3028ff-b3d0-49c4-8c39-2dbfebbe4701"
       ],
       "settings": {
         "title": "Frequently Asked Questions",
