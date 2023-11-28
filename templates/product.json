@@ -182,7 +182,8 @@
       "custom_css": [
         ".background-media-text__aligner {margin-top: 200px;}",
         ".background-media-text__text {background-color: #ffffff00; color: #fff;}",
-        "h1 {text-align: left;}"
+        "h1 {text-align: left;}",
+        ".second-h1 {margin-top: 60px;}"
       ],
       "settings": {
         "subtitle": "",
