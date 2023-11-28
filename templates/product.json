@@ -269,6 +269,19 @@
         "lazyload_images": true
       }
     },
+    "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Individual Omura Products",
+        "description": "",
+        "home_featured_products": "earrings",
+        "rows": 1,
+        "per_row_desktop": 3,
+        "per_row_mobile": "1",
+        "view_all": false,
+        "alt": false
+      }
+    },
     "8889af03-8854-4e72-897c-b71009e2000e": {
       "type": "background-image-text",
       "settings": {
@@ -281,19 +294,6 @@
         "color_border": "#f4f4f4",
         "layout": "right",
         "lazyload_images": true
-      }
-    },
-    "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection grid",
-        "description": "",
-        "home_featured_products": "",
-        "rows": 1,
-        "per_row_desktop": 3,
-        "per_row_mobile": "1",
-        "view_all": false,
-        "alt": false
       }
     },
     "578094fe-0bf8-43ec-a4d8-b47851107d07": {
@@ -355,8 +355,8 @@
     "background-image-text",
     "ee38677f-f2ef-45ae-bc79-f42c9bbe386a",
     "b4befc00-9b51-4080-80d6-22703498116e",
-    "8889af03-8854-4e72-897c-b71009e2000e",
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5",
+    "8889af03-8854-4e72-897c-b71009e2000e",
     "578094fe-0bf8-43ec-a4d8-b47851107d07",
     "product-recommendations",
     "collection-return"
