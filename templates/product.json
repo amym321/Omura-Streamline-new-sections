@@ -271,16 +271,15 @@
     },
     "8889af03-8854-4e72-897c-b71009e2000e": {
       "type": "background-image-text",
-      "disabled": true,
       "settings": {
-        "subtitle": "",
-        "title": "Large image with text box",
-        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "subtitle": "VAPORIZES",
+        "title": "Up to 98% of Cannabinoids",
+        "text": "<p>The incredibly efficient Series 1 has been documented to cleanly vaporize up to 98% of cannabinoids and terpenes present in a single session.<\/p>",
         "button_label": "",
         "button_link": "",
         "desktop_size": 0,
         "color_border": "#f4f4f4",
-        "layout": "left",
+        "layout": "right",
         "lazyload_images": true
       }
     },
