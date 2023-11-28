@@ -277,6 +277,9 @@
     },
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5": {
       "type": "featured-collection",
+      "custom_css": [
+        "header {text-align: left;}"
+      ],
       "settings": {
         "title": "Individual Omura Products",
         "description": "",
