@@ -92,6 +92,7 @@
                 grid_item_width: grid_item_width,
                 sizeVariable: grid_large_width,
                 fallback: fallback,
+                product_atc: section.settings.product_atc,
               -%}
             {%- endfor -%}
 
@@ -111,6 +112,7 @@
 
 </div>
 
+{% comment %} added ATC - am {% endcomment %}
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -130,6 +132,12 @@
       "type": "collection",
       "id": "home_featured_products",
       "label": "t:sections.featured-collection.settings.home_featured_products.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_atc",
+      "label": "Include add-to-cart buttons",
+      "default": false
     },
     {
       "type": "range",

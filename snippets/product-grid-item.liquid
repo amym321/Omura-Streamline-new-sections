@@ -53,6 +53,11 @@
       endif
     endfor
   endif
+
+  assign productATC = false
+  if product_atc
+    assign productATC = product_atc
+  endif
 -%}
 
 <div
@@ -326,6 +331,16 @@
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
       {%- endif -%}
     </a>
+
+    {% comment %} add ATC button - am {% endcomment %}
+    {% if productATC %}
+      <form method="post" action="/cart/add">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input class="hide" min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <input type="submit" value="Add to cart" class="btn add-to-cart" />
+      </form>
+    {% endif %}
+
   </div>
 
   {%- if enable_quick_shop and type == blank -%}
