@@ -180,7 +180,7 @@
     "background-image-text": {
       "type": "background-image-text",
       "custom_css": [
-        "@media (min-width: 769px) {.background-media-text__aligner {margin-top: 200px; } .background-media-text__text {background-color: #ffffff00; color: #fff; } h2 {text-align: left; } .second-h2 {margin-top: 60px; }}"
+        "@media (min-width: 769px) {.background-media-text__aligner {margin-top: 180px; } .background-media-text__text {background-color: #ffffff00; color: #fff; } h2 {text-align: left; } .second-h2 {margin-top: 60px; } .background-media-text__text {width: 450px; }}"
       ],
       "settings": {
         "subtitle": "",
