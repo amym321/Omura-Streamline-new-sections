@@ -180,15 +180,16 @@
     "background-image-text": {
       "type": "background-image-text",
       "custom_css": [
-        ".background-media-text__aligner{margin-top:200px;}",
+        ".background-media-text__aligner {margin-top: 200px;}",
         ".background-media-text__text {background-color: #ffffff00; color: #fff;}"
       ],
       "settings": {
         "subtitle": "",
-        "title": "Large image with text box",
-        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "title": "Release button",
+        "text": "",
         "button_label": "",
         "button_link": "",
+        "image": "shopify:\/\/shop_images\/image_28_b.jpg",
         "desktop_size": 0,
         "color_border": "#f4f4f4",
         "layout": "right",
