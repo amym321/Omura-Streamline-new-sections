@@ -1,4 +1,10 @@
 <style>
+
+  .footer-img {
+    margin: auto;
+  }
+
+  
   @media (min-width:769px) {
     .footer__blocks-wrapper {
       row-gap: 6rem;
@@ -15,6 +21,21 @@
     .grid__item-separator {
       width: calc(100% - 772px);
     }
+    .footer-bottom {
+      display:flex;
+      margin-bottom: 100px; /* 20px */
+    }
+    .site-footer__copyright {
+      width:50%;
+      padding: 5px 0 10px 0;
+      vertical-align: middle;
+    }
+    .footer-bottom-menu {
+      width:50%;
+      justify-content: end;
+      display: flex;
+      margin-top:0 !important;
+    }
   }
 
 
@@ -24,6 +45,18 @@
       margin-bottom: 2rem;
       padding: 0;
       list-style: none;
+    }
+
+    .footer-bottom {
+      margin-bottom: 40px;
+    }
+    .site-footer__copyright {
+      margin: 30px 0 20px;
+    }
+    .footer-bottom-menu {
+      width:100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -40,61 +73,77 @@
     {% comment %} DAWN {% endcomment %}
     {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
-    <h2 style="color:red;">Footer-new</h2>
-
     <div class="footer__blocks-wrapper  grid--1-col grid--2-col grid--4-col-tablet grid--4-col-desktop"
         style="">
       {%- for block in section.blocks -%}
         <div class="footer-block grid__item-footer {% if block.type == 'separator' %} grid__item-separator {% endif %}{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
           {%- if block.settings.heading != blank -%}
-            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+            <h2 style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px; color: #d3d3d3;"  class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
           {%- endif -%}
 
           {%- case block.type -%}
             {%- when 'text' -%}
               <div class="footer-block__details-content rte">
                 <ul style="margin-left:0;">
-                  <li style="list-style-type: none ">{{ block.settings.subtext-1 }}</li>
-                  <li style="list-style-type: none "></li>{{ block.settings.subtext-2 }}</li>
-                  <li style="list-style-type: none "></li>{{ block.settings.subtext-3 }}</li>
+                  <li style="list-style-type: none; font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;">{{ block.settings.subtext-1 }}</li>
+                  <li style="list-style-type: none; font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;">{{ block.settings.subtext-2 }}</li>
+                  <li style="margin: 15px 0; list-style-type: none; font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;">{{ block.settings.subtext-3 }}</li>
                 </ul>
+                {%- if section.settings.show_social_icons -%}
+                  <div class="site-footer__section">
+                    <ul class="no-bullets inline-list social-icons {{ social_class }}">
+                      {%- if settings.social_instagram_link != blank -%}
+                        <li>
+                          <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+                            <svg style="height:23px; width:23px;"  aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 32 32"><title>instagram</title><path fill="#444" d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"/><path fill="#444" d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"/></svg>
+                            <span class="icon__fallback-text">Instagram</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a style="margin-left:8px; font-size: calc(var(--typeBaseSize)*1.22);  font-size: 15px;" target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+                            <em style="text-decoration: underline 2px #0000001a;  ">@Omura</em>
+                          </a>
+                        </li>
+                      {%- endif -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
               </div>
-              {%- if section.settings.show_social_icons -%}
-                <div class="site-footer__section">
-                  <ul class="no-bullets inline-list social-icons {{ social_class }}">
-                    {%- if settings.social_instagram_link != blank -%}
-                      <li>
-                        <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 32 32"><title>instagram</title><path fill="#444" d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"/><path fill="#444" d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"/></svg>
-                          <span class="icon__fallback-text">Instagram</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a target="_blank" rel="noopener" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
-                          @Omura
-                        </a>
-                      </li>
-                    {%- endif -%}
-                  </ul>
-                </div>
-              {%- endif -%}
+
+
             {%- when 'link_list' -%}
               {%- if block.settings.menu != blank -%}
-                <ul class="footer-block__details-content list-unstyled">
+                <ul style="margin-left:0;"  class="footer-block__details-content list-unstyled">
                   {%- for link in block.settings.menu.links -%}
-                    <li>
-                      <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                    <li  style="list-style-type: none; ">
+                      <a style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;"
+                        href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
                         {{ link.title }}
                       </a>
                     </li>
                   {%- endfor -%}
                 </ul>
               {%- endif -%}
+              {%- if block.settings.show_payment_icons -%}
+                <br>
+                {%- unless shop.enabled_payment_types == empty -%}
+                  <div class="site-footer__section">
+                    <ul class="inline-list payment-icons">
+                      {%- for type in shop.enabled_payment_types -%}
+                        <li class="icon--payment">
+                          {{ type | payment_type_svg_tag }}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endunless -%}
+              {%- endif -%}
+
             {%- when 'image' -%}
               <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                 {%- if block.settings.image != blank -%}
                   {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                  <img
+                  <img  class="footer-img"
                     srcset= "{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
                     src="{{ block.settings.image | image_url: width: 400 }}"
                     alt="{{ block.settings.image.alt | escape }}"
@@ -121,19 +170,7 @@
   
 
 
-    {%- if section.settings.show_payment_icons -%}
-      {%- unless shop.enabled_payment_types == empty -%}
-        <div class="site-footer__section">
-          <ul class="inline-list payment-icons">
-            {%- for type in shop.enabled_payment_types -%}
-              <li class="icon--payment">
-                {{ type | payment_type_svg_tag }}
-              </li>
-            {%- endfor -%}
-          </ul>
-        </div>
-      {%- endunless -%}
-    {%- endif -%}
+
 
 
 
@@ -143,17 +180,21 @@
 
 
 <hr style="border-top-color: #0000001a;">
-<div style="display:flex; margin-bottom: 20px;"  class="page-width"  >
+<div style=""  class="page-width  footer-bottom"  >
 
-  <div style="width:50%; padding: 10px 0; vertical-align: middle; "  class="site-footer__section site-footer__copyright">
+  <div style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;"  class="site-footer__section site-footer__copyright">
     <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }} - All patents reserved</span>
   </div>
 
   {%- if linklists[section.settings.menu].links.size > 0 -%}
-    <div style="width:50%;  justify-content: end; display: flex; margin-top:0;"  class="site-footer__section">
+    <div style=""  class="site-footer__section footer-bottom-menu ">
       <ul class="no-bullets inline-list site-footer__linklist">
         {%- for link in linklists[section.settings.menu].links -%}
-          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          <li>
+            <a style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;"
+                href="{{ link.url }}">{{ link.title }}
+            </a>
+          </li>
         {%- endfor -%}
       </ul>
     </div>
@@ -190,7 +231,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.footer.name",
+  "name": "Footer Detailed",
 
 
         "blocks": [
@@ -201,7 +242,7 @@
               {
                 "type": "text",
                 "id": "heading",
-                "default": "Menu links",
+                "default": "INFORMATION",
                 "label": "heading"
               },
               {
@@ -210,6 +251,11 @@
                 "default": "footer",
                 "label": "Menu",
                 "info": "Displays only top-level menu items."
+              },
+              {
+                "type": "checkbox",
+                "id": "show_payment_icons",
+                "label": "t:sections.footer.settings.show_payment_icons.label"
               }
             ]
           },
@@ -302,11 +348,7 @@
       "label": "t:sections.footer.settings.show_social_icons.label",
       "default": true
     },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:sections.footer.settings.show_payment_icons.label"
-    },
+
     {
       "type": "link_list",
       "id": "menu",
