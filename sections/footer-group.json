@@ -36,7 +36,8 @@
         "2ef8f613-17fd-4654-afd2-982b0df6bfbb": {
           "type": "image",
           "settings": {
-            "image_width": 100,
+            "image": "shopify:\/\/shop_images\/image_25.png",
+            "image_width": 120,
             "alignment": "center"
           }
         },
