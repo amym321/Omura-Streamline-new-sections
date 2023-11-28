@@ -43,10 +43,10 @@
         "e5b98a66-674a-4b5a-9e27-55213364f315": {
           "type": "text",
           "settings": {
-            "heading": "Heading",
-            "subtext-1": "line 1",
-            "subtext-2": "line 2",
-            "subtext-3": "line 3"
+            "heading": "",
+            "subtext-1": "618 Hampton Dr, Venice",
+            "subtext-2": "California, 90291, USA",
+            "subtext-3": "(888) 656-6872"
           }
         },
         "08b30f6c-fbbe-4ede-8eb5-3d0bed7315d5": {
@@ -58,14 +58,16 @@
           "type": "link_list",
           "settings": {
             "heading": "Menu links",
-            "menu": "footer"
+            "menu": "footer",
+            "show_payment_icons": false
           }
         },
         "62b5ba01-e740-48d8-8a9b-d87e94632ef3": {
           "type": "link_list",
           "settings": {
             "heading": "Menu links",
-            "menu": "footer"
+            "menu": "footer",
+            "show_payment_icons": false
           }
         }
       },
@@ -78,7 +80,6 @@
       ],
       "settings": {
         "show_social_icons": true,
-        "show_payment_icons": false,
         "menu": "footer"
       }
     }
