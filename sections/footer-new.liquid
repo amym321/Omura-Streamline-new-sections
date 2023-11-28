@@ -1,66 +1,4 @@
-<style>
 
-  .footer-img {
-    margin: auto;
-  }
-
-  
-  @media (min-width:769px) {
-    .footer__blocks-wrapper {
-      row-gap: 6rem;
-      margin-bottom: 0;
-      column-gap: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0;
-      list-style: none;
-    }
-    .grid__item-footer {
-      width: 185px
-    }
-    .grid__item-separator {
-      width: calc(100% - 772px);
-    }
-    .footer-bottom {
-      display:flex;
-      margin-bottom: 100px; /* 20px */
-    }
-    .site-footer__copyright {
-      width:50%;
-      padding: 5px 0 10px 0;
-      vertical-align: middle;
-    }
-    .footer-bottom-menu {
-      width:50%;
-      justify-content: end;
-      display: flex;
-      margin-top:0 !important;
-    }
-  }
-
-
-  @media (max-width:768px) {
-    .footer__blocks-wrapper {
-      display: block;
-      margin-bottom: 2rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .footer-bottom {
-      margin-bottom: 40px;
-    }
-    .site-footer__copyright {
-      margin: 30px 0 20px;
-    }
-    .footer-bottom-menu {
-      width:100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-</style>
 
 
 <hr style="border-top-color: #0000001a;">
@@ -78,7 +16,7 @@
       {%- for block in section.blocks -%}
         <div class="footer-block grid__item-footer {% if block.type == 'separator' %} grid__item-separator {% endif %}{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
           {%- if block.settings.heading != blank -%}
-            <h2 style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px; color: #d3d3d3;"  class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
           {%- endif -%}
 
           {%- case block.type -%}
@@ -115,7 +53,7 @@
               {%- if block.settings.menu != blank -%}
                 <ul style="margin-left:0;"  class="footer-block__details-content list-unstyled">
                   {%- for link in block.settings.menu.links -%}
-                    <li  style="list-style-type: none; ">
+                    <li class="footer-link-list-link" style="list-style-type: none; ">
                       <a style="font-size: calc(var(--typeBaseSize)*1.22); font-size: 15px;"
                         href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
                         {{ link.title }}
@@ -165,16 +103,6 @@
       {%- endfor -%}
     </div>
 
-
-
-  
-
-
-
-
-
-
-
   </div>
 </footer>
 
@@ -203,6 +131,101 @@
 </div>
 
 
+<style>
+  .grid__item-footer,
+  .footer-block-image {
+    width: 190px; /* 185 */
+  }
+
+  .footer-img {
+    margin: auto;
+  }
+
+  .footer-block__heading {
+    font-size: 15px;
+    color: #5f5f5f;
+  }
+
+  @media (min-width:769px) {
+    .footer__blocks-wrapper {
+      row-gap: 6rem;
+      margin-bottom: 0;
+      column-gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style: none;
+    }
+    .grid__item-separator {
+      width: calc(100% - 792px) !important; /*772*/
+    }
+    .footer-bottom {
+      display:flex;
+      margin-bottom: 100px; /* 20px */
+    }
+    .site-footer__copyright {
+      width:50%;
+      padding: 5px 0 10px 0;
+      vertical-align: middle;
+    }
+    .footer-bottom-menu {
+      width:50%;
+      justify-content: end;
+      display: flex;
+      margin-top:0 !important;
+    }
+    .footer-block__details-content > li:not(:last-child) {
+      margin-right:0 !important;
+    }
+    .footer-block--menu .footer-link-list-link {
+      margin-bottom:15px;
+    }
+  }
+
+
+  @media (max-width:768px) {
+    .footer-block h2,
+    .footer-block .site-footer__section,
+    .footer-block li {
+      text-align: center;
+    }
+    .grid__item-footer {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-bottom: 35px !important;
+      width:190px !important;
+    }
+    .footer__blocks-wrapper {
+      display: block;
+      margin-bottom: 2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-bottom {
+      margin-bottom: 40px;
+    }
+    .site-footer__copyright {
+      margin: 30px 0 20px;
+    }
+    .footer-bottom-menu {
+      width:100%;
+      display: flex;
+      justify-content: center;
+    }
+    .footer-block__heading {
+      font-size: 15px !important;
+      margin-bottom: 15px !important;
+    }
+  }
+
+  @media (min-width:769px) and (max-width:900px) {
+    .grid__item-footer {
+      width:260px;
+    }
+  }
+
+</style>
 
 {%- style -%}
   .footer {
