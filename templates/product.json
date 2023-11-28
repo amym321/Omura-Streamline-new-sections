@@ -118,6 +118,7 @@
         },
         "281f2607-d59d-4176-bb68-318142361e67": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
           "settings": {
             "animation": true,
             "tags_exclude": "",
