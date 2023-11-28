@@ -49,6 +49,11 @@
             "subtext-3": "line 3"
           }
         },
+        "08b30f6c-fbbe-4ede-8eb5-3d0bed7315d5": {
+          "type": "separator",
+          "settings": {
+          }
+        },
         "1f59c0d3-db4e-493d-b40d-cddecb06718e": {
           "type": "link_list",
           "settings": {
@@ -67,6 +72,7 @@
       "block_order": [
         "2ef8f613-17fd-4654-afd2-982b0df6bfbb",
         "e5b98a66-674a-4b5a-9e27-55213364f315",
+        "08b30f6c-fbbe-4ede-8eb5-3d0bed7315d5",
         "1f59c0d3-db4e-493d-b40d-cddecb06718e",
         "62b5ba01-e740-48d8-8a9b-d87e94632ef3"
       ],
