@@ -44,6 +44,14 @@
           {%- if section.settings.title != blank -%}
             <h2 class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</h2>
           {%- endif -%}
+
+          {% comment %} added heading line - am {% endcomment %}
+          {%- if section.settings.title2 != blank -%}
+            {% unless section.settings.title2 contains "Second" %}
+              <h2 class="h1 second-h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title2 | escape }}</h2>
+            {% endunless %}
+          {%- endif -%}
+
           {%- if section.settings.text != blank -%}
             <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
           {%- endif -%}
@@ -73,6 +81,12 @@
       "id": "title",
       "label": "t:sections.background-image-text.settings.title.label",
       "default": "Large image with text box"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "2nd Heading line",
+      "default": "Second Heading"
     },
     {
       "type": "richtext",
