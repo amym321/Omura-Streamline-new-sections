@@ -12,9 +12,9 @@
         "description": "<p>JOINT OUR HEAT-NOT-BURN MOVEMENT<\/p>"
       }
     },
-
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "show_newsletter": false,
         "newsletter_title": "Join the club",
@@ -30,7 +30,6 @@
         "copyright_text": ""
       }
     },
-
     "footer-new": {
       "type": "footer-new",
       "blocks": {
@@ -45,7 +44,9 @@
           "type": "text",
           "settings": {
             "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext-1": "line 1",
+            "subtext-2": "line 2",
+            "subtext-3": "line 3"
           }
         },
         "1f59c0d3-db4e-493d-b40d-cddecb06718e": {
@@ -71,7 +72,8 @@
       ],
       "settings": {
         "show_social_icons": true,
-        "show_payment_icons": false
+        "show_payment_icons": false,
+        "menu": "footer"
       }
     }
   },
