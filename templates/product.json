@@ -322,8 +322,8 @@
         "96f41a47-0905-40a4-af93-d69b9cf23032"
       ],
       "settings": {
-        "title": "FAQs with Text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "title": "Frequently Asked Questions",
+        "text": "",
         "button_label": "VIEW ALL FAQS",
         "button_link": "",
         "button_style": "secondary"
