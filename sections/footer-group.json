@@ -57,7 +57,7 @@
         "1f59c0d3-db4e-493d-b40d-cddecb06718e": {
           "type": "link_list",
           "settings": {
-            "heading": "Menu links",
+            "heading": "INFORMATION",
             "menu": "footer",
             "show_payment_icons": false
           }
@@ -65,9 +65,9 @@
         "62b5ba01-e740-48d8-8a9b-d87e94632ef3": {
           "type": "link_list",
           "settings": {
-            "heading": "Menu links",
+            "heading": "COMPANY",
             "menu": "footer",
-            "show_payment_icons": false
+            "show_payment_icons": true
           }
         }
       },
