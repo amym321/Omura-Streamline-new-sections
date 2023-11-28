@@ -318,15 +318,15 @@
         "d2e69206-e55e-48d5-9d0d-a4c8aba5d91d": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "title": "Can I stop a session halfway through?",
+            "text": "<p>To stop a session halfway through, simply remove the Flowerstick and the Series 1 will turn-off automatically. To restart the session, insert the Flowerstick and the device will begin to heat-up and the three minute session will restart.<\/p>"
           }
         },
         "5d3028ff-b3d0-49c4-8c39-2dbfebbe4701": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "title": "Can I reuse Flowersticks?",
+            "text": "<p>The Flowersticks have been designed for single-use, however we are aware that some of our customers do reuse the Flowersticks once or twice. We do not warranty their performance upon reuse.<\/p>"
           }
         }
       },
