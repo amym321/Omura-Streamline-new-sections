@@ -213,7 +213,7 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
-            "title": "Omura vaporizes up to \n99% of all cannabinoid \n& terpenes",
+            "title": "Omura vaporizes up to 99% of all cannabinoid & terpenes",
             "title_size": 45,
             "subheading": "Yes, you read that right. We tested our award-winning devices at SC labs in California and came back with results that shocked even us.",
             "link": "",
@@ -229,7 +229,8 @@
         "slideshow-0"
       ],
       "custom_css": [
-        ".hero__text-shadow {max-width: 550px;}"
+        ".hero__text-shadow {max-width: 550px;}",
+        ".hero__title {margin: 20px 0;}"
       ],
       "settings": {
         "style": "arrows",
