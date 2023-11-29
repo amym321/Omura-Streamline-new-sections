@@ -36,7 +36,7 @@
     "type_navigation_size": 22,
     "button_type_style": "normal",
     "button_style": "round",
-    "animate_images": true,
+    "animate_images": false,
     "animate_page_transitions": true,
     "logo_loader_image": "shopify:\/\/shop_images\/force_black.png",
     "desktop_loader_width": 80,
