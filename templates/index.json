@@ -19,7 +19,7 @@
         "alt": false,
         "top_padding": false,
         "bottom_padding": false,
-        "lazyload_images": true
+        "lazyload_images": false
       }
     },
     "text-and-image-2": {
