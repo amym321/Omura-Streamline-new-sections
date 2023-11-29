@@ -16,7 +16,7 @@
         "align_text": "left",
         "image_width": "66",
         "layout": "right",
-        "alt": true,
+        "alt": false,
         "top_padding": false,
         "bottom_padding": false,
         "lazyload_images": true
