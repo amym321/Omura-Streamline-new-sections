@@ -278,7 +278,8 @@
     "26a0fd3d-fb6d-4ca3-a6a8-6f516732e0c5": {
       "type": "featured-collection",
       "custom_css": [
-        "header {text-align: left;}"
+        "header {text-align: left;}",
+        ".btn:hover{background-color: rgba(13, 47, 41, 0.47) !important !important;}"
       ],
       "settings": {
         "title": "Individual Omura Products",
