@@ -16,6 +16,11 @@
         "align_text": "left",
         "image_width": "66",
         "layout": "right",
+        "title_2": "Series 1\nComplete Bundle",
+        "text_2": "",
+        "link": "",
+        "link_text": "SHOP NOW",
+        "color_body": "#E7ECEB",
         "alt": false,
         "top_padding": false,
         "bottom_padding": false,
@@ -115,7 +120,8 @@
         "d65c2166-e301-4c78-a69b-46b609a2159e": {
           "type": "testimonial",
           "settings": {
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "testimonial": "<p>It’s ideal for vape consumers who want to control their dose, are concerned about mess, or for whom a more discrete and less combustion-focused method of consuming is desired.<\/p>",
+            "image": "shopify:\/\/shop_images\/Uresta-logo.png",
             "author": "Author's name"
           }
         },
@@ -213,6 +219,7 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
+            "subtitle": "A GAME CHANGING CONVECTION OVEN",
             "title": "Omura vaporizes up to 99% of all cannabinoid & terpenes",
             "title_size": 45,
             "subheading": "Yes, you read that right. We tested our award-winning devices at SC labs in California and came back with results that shocked even us.",
@@ -277,6 +284,7 @@
         "template--16187353891013__c6537776-db5d-497b-96cd-4ecca0f51ca2-image-1": {
           "type": "image",
           "settings": {
+            "subtitle": "A GAME CHANGING CONVECTION OVEN",
             "title": "Two line\nslide title.",
             "title_size": 80,
             "subheading": "And an optional subheading",
