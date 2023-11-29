@@ -20,7 +20,8 @@
   {% endif %}
 {% endstyle %}
 
-<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} three-panel">
+<div class="index-section{% if section.settings.alt %} index-section--alt{% endif %} three-panel"
+  style="background-color: {{section.settings.color_body}}">
 
   <div class=" feature-row-wrapper feature-row--{{ image_width }}"> {% comment %} page-width {% endcomment %}
     {%- capture image_layout -%}
@@ -75,7 +76,8 @@
           {%- if section.settings.image2 != blank -%}
             <div class="feature-row__second-image">
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
-                <div class="image-wrap {% if section.settings.image2_mask != 'none' %}svg-mask svg-mask--{{ section.settings.image2_mask }}{% endif %}" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
+                <div class="image-wrap {% if section.settings.image2_mask != 'none' %}svg-mask svg-mask--{{ section.settings.image2_mask }}{% endif %}"
+                  style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
                   {%- liquid
                     if section.settings.image == blank
                       assign sizeVariable = section.settings.image_width | append: 'vw'
@@ -88,6 +90,7 @@
                   {%- render 'image-element',
                     img: section.settings.image2,
                     widths: '180, 360, 540, 750, 900, 1080',
+                    loading: loading,
                     sizeVariable: sizeVariable,
                     fallback: fallback,
                     classes: 'feature-row__image',
@@ -95,6 +98,29 @@
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
             </div>
+
+            {% comment %} added text on 3rd image panel - am {% endcomment %}
+            <div class="hero__text-wrap text-over-image">
+              <div class="text-over-image-container" >
+                <div class="hero__text-content {{ block.settings.text_align }}">
+                  <div class="hero__text-shadow" data-aos>
+                    {%- unless section.settings.title_2 == blank -%}
+                      <h2 class="h1 hero__title">
+                        {{ section.settings.title_2 | newline_to_br }}
+                      </h2>
+                    {%- endunless -%}
+                    {%- if section.settings.link_text != blank -%}
+                      <div class="hero__link" style="color:#000; margin-top: 20px;">
+                        <a href="{{ section.settings.link }}" style="text-decoration: underline; color:#000;">
+                          {{ section.settings.link_text }}
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+
           {%- endif -%}
           {%- if section.settings.image == blank and section.settings.image2 == blank -%}
             <div class="placeholder-image-wrap">
@@ -145,13 +171,69 @@
 
 
 <style>
-  @media (min-width: 769px) {
     .index-section.three-panel {
       padding: 0;
     }
     .three-panel .feature-row {
       margin: 0;
     }
+    .three-panel .btn {
+      margin-top: 40px;
+    }
+    .three-panel .feature-row__images  {
+      padding:0;
+    }
+    .three-panel .feature-row__item--overlap-images>:first-child {
+      transform: unset;
+    }
+
+    .three-panel  .image-wrap {
+      transition: unset;
+    }
+
+    /* 3rd panel text over image */
+    .three-panel .text-over-image {
+      width: 33%;
+      margin:auto;
+      height: unset;
+      transform: none;
+      opacity: 1;
+      color:#000;
+    }
+    .three-panel .text-over-image-container {
+      width: 280px;
+      margin: auto;
+    }
+    .three-panel .hero__text-content {
+      margin: 0 20px;
+      padding:0;
+      transform: translatey(150px);
+    }
+    .three-panel .hero__text-shadow {
+      text-align: center;
+    }
+    .three-panel .hero__text-shadow:before {
+      display:none;
+    }
+    .three-panel .hero__title {
+      font-size: 30px;
+    }
+
+
+  @media (min-width: 769px) and  (max-width: 960px) {
+    .three-panel .text-over-image-container {
+      width: 230px;
+    }
+    .three-panel .hero__text-content {
+      transform: translatey(100px);
+    }
+    .three-panel .hero__title {
+      font-size: 25px;
+    }
+  }
+
+
+  @media (min-width: 769px) {
     .three-panel .feature-row-wrapper .feature-row__text {
       /* flex: 0 1 33%; */
       padding:0 50px;
@@ -159,11 +241,8 @@
     }
     .three-panel .feature-row__images  {
       min-width: 33%;
-      padding:0;
     }
-    .three-panel .feature-row__item--overlap-images>:first-child {
-      transform: unset;
-    }
+
     .three-panel .feature-row__item--overlap-images .feature-row__first-image,
     .three-panel .feature-row__item--overlap-images .feature-row__second-image {
       width: 100%;
@@ -171,8 +250,33 @@
 
   }
 
-  @media (max-width: 768px) {
 
+  @media (max-width: 768px) {
+    .three-panel .feature-row-wrapper .feature-row__text {
+      order: 2;
+      padding: 40px 50px;
+    }
+
+    .three-panel .feature-row-wrapper .feature-row__images:has(>.feature-row__first-image) {
+      order: 1;
+    }
+    .three-panel .feature-row-wrapper .feature-row__images:has(>.feature-row__second-image){
+      order: 3;
+    }
+
+    .three-panel .feature-row__item--overlap-images {
+      margin:0;
+    }
+
+    .three-panel .feature-row__item--overlap-images .feature-row__first-image,
+    .three-panel .feature-row__item--overlap-images .feature-row__second-image {
+      width: 100%;
+    }
+
+    /* 3rd panel text over image */
+    .three-panel .text-over-image {
+      width:100%;
+    }
   }
 </style>
 
@@ -189,7 +293,7 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.text-and-image.settings.image.label"
+      "label": "Image 1"
     },
     {
       "type": "select",
@@ -246,10 +350,6 @@
           "label": "t:common.image_mask.options.splat-4.label"
         }
       ]
-    },
-    {
-      "type": "header",
-      "content": "t:sections.text-and-image.settings.image2.label"
     },
     {
       "type": "image_picker",
@@ -314,7 +414,7 @@
     },
     {
       "type": "header",
-      "content": "Content"
+      "content": "Panel - Text Panel"
     },
     {
       "type": "text",
@@ -415,6 +515,39 @@
         }
       ]
     },
+    {
+      "type": "header",
+      "content": "Panel - Text Under 2nd Image"
+    },
+    {
+      "type": "textarea",
+      "id": "title_2",
+      "label": "Heading",
+      "default": "Series 1\nComplete Bundle"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Text Line"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link url"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "color",
+      "id": "color_body",
+      "label": "Select background color",
+      "default": "#E7ECEB"
+    },
+
     {
       "type": "checkbox",
       "id": "alt",
