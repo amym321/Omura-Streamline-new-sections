@@ -279,7 +279,7 @@
       "type": "featured-collection",
       "custom_css": [
         "header {text-align: left;}",
-        ".btn:hover{background-color: rgba(13, 47, 41, 0.47) !important !important;}"
+        ".btn:hover {background-color: #0d2f2978 !important !important;}"
       ],
       "settings": {
         "title": "Individual Omura Products",
